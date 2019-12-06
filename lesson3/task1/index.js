@@ -37,7 +37,7 @@ undefined + '5';
 'text' + null;
 
 console.log("+17: ", +17);
-console.log("'77': ", '77');
+console.log("+'77': ", +'77');
 console.log("10 + '5': ", 10 + '5');
 console.log("'some' + 'text': ", 'some' + 'text');
 console.log("undefined + 1: ", undefined + 1);
@@ -56,7 +56,6 @@ console.log("4 * 'four': ", 4 * 'four');
 console.log("17 / 0: ", 17 / 0);
 console.log("10 + 'seven': ", 10 + 'seven');
 console.log("undefined + 1: ", undefined + 1);
-
 console.log("null + 8;: ", null + 8);
 console.log("undefined + '5': ", undefined + '5');
 console.log("'text' + null: ", 'text' + null);
