@@ -46,7 +46,6 @@ console.log("undefined + '5': ", undefined + '5');
 console.log("7 - null: ", 7 - null);
 console.log("5 - undefined: ", 5 - undefined);
 console.log("'text' + null: ", 'text' + null);
-console.log("++num: ", ++num);
 console.log("num++: ", num++);
 console.log("'24' / 4: ", '24' / 4);
 console.log("18 * '3': ", 18 * '3');
