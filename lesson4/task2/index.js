@@ -9,7 +9,7 @@ while (man <= note) {
     }
     man++;
 };
-console.log("Result: ", result);
+console.log(result);
 
 /*
 Посчитать произведение всех нечетных чисел от m до n
