@@ -1,9 +1,8 @@
 const m = 16;
 const n = 25;
 let man = m;
-let note = n;
 let result = 1;
-while (man <= note) {
+while (man <= n) {
     if (man % 2 === 1) {
         result *= man;
     }
