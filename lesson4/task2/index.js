@@ -2,12 +2,13 @@ const m = 16;
 const n = 25;
 let man = m;
 let result = 1;
-while (man <= n) {
+do {
     if (man % 2 === 1) {
         result *= man;
-        man++;
     }
-};
+    man++;
+}
+while (man <= n)
 console.log('Result: ', result);
 
 /*
@@ -19,4 +20,5 @@ console.log('Result: ', result);
 Объявите переменную n, которая содержит целое число больше m
 m и n не должны меняться в процкссе работы программы
 Результат должен храниться в переменной result
+    
 */
