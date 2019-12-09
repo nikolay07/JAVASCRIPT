@@ -12,11 +12,12 @@ for (let i = m; i < n; i++) {
 
     } else if (i % 5 === 0) {
         console.log(i)
+
     }
     continue
-    console.log(result);
-};
 
+};
+console.log(result);
 
 
 /*
