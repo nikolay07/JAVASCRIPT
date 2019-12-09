@@ -3,11 +3,13 @@ const n = 1000;
 let sum = 0;
 for (i = 0; i <= n; i++) {
     if (i % 2 === 1) {
-        sum += i
-        console.log(sum)
-    }
-
+        console.log('Found')
+        sum += i;
+    } else if (sum * 5 > 5000) { console.log('Bigger') }
+    console.log('Smaller or equal');
 }
+
+
 
 
 /* 
