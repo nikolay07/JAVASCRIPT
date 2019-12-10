@@ -7,8 +7,8 @@ for (let i = 0; i <= n; i++) {
     };
 }
 if (sum * 5 > 5000) {
-    console.log('Bigger')
-} else { console.log('Smaller or equal'); };
+    console.log('Bigger');
+} else { console.log('Smaller or equal'); }
 
 /* 
 Нахождение нечетных и их количетсво
