@@ -5,10 +5,13 @@ for (let i = 0; i <= n; i++) {
         console.log('Found');
         sum += i;
     };
-}
+};
 if (sum * 5 > 5000) {
     console.log('Bigger');
-} else { console.log('Smaller or equal'); }
+}
+if (sum * 5 <= 5000) {
+    console.log('Smaller or equal');
+}
 
 /* 
 Нахождение нечетных и их количетсво
