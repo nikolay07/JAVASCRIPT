@@ -5,10 +5,11 @@ for (i = 0; i <= n; i++) {
     if (i % 2 === 1) {
         sum += i;
         console.log('Found')
-
-    } else if (sum * 5 > 5000) { console.log('Bigger') }
-    console.log('Smaller or equal');
+    };
 }
+if (sum * 5 > 5000) {
+    console.log('Bigger')
+} else { console.log('Smaller or equal'); };
 
 
 
