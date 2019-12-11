@@ -1,5 +1,5 @@
 function getEvenOdd(num) {
-    if (name % 2 === 1) {
+    if (num % 2 === 1) {
         return 'odd';
     } else {
         return 'even';
