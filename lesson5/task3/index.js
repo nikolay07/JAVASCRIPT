@@ -3,5 +3,5 @@ function getEvenOdd(num) {
         return 'even';
     } else {
         return 'odd';
-    }
+    };
 };
