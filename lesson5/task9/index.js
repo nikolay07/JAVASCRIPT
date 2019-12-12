@@ -1,7 +1,7 @@
 function findDivCount(a, b, n) {
     let sum = 0;
     for (let i = a; i <= b; i++) {
-        if (a % n == 0) sum += i;
+        if (i % n == 0) sum++;
     }
     return sum;
 }
