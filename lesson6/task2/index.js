@@ -1,5 +1,3 @@
-const sumNumbers = [];
-
 function getSum(sumNumbers) {
     let someOfNumbers = 0;
     for (let i = 0; i < numbers.length; i++) {
