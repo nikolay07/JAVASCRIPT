@@ -1,4 +1,4 @@
-const sumNumbers = []
+const sumNumbers = [];
 
 function getSum(sumNumbers) {
     let someOfNumbers = 0;
