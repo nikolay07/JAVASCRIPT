@@ -1,16 +1,16 @@
-const numbers = []
+const sumNumbers = []
 
 function getSum(sumNumbers) {
     let someOfNumbers = 0;
     for (let i = 0; i < numbers.length; i++) {
+        someOfNumbers += numbers[i];
         if (!Array.isArray(sumNumbers)) {
             return null;
-        } else {
-            someOfNumbers += numbers[i];
-            return someOfNumbers;
         }
+        return someOfNumbers;
     }
 }
+
 
 /*
 Найдите сумму элементов массива
