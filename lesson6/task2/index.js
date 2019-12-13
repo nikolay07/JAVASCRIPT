@@ -1,11 +1,13 @@
-function getSum(sumNumbers) {
+const numbers = [];
+
+function getSum(numbers) {
     let someOfNumbers = 0;
     for (let i = 0; i < numbers.length; i++) {
         someOfNumbers += numbers[i];
-        if (!Array.isArray(sumNumbers)) {
-            return null;
-        }
-        return someOfNumbers;
+    }
+    return someOfNumbers;
+    if (!Array.isArray(numbers)) {
+        return null;
     }
 }
 
