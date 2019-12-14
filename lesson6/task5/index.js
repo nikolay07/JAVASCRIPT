@@ -2,8 +2,8 @@ function squareArray(numbers) {
     if (!Array.isArray(numbers)) {
         return null;
     }
-    let arrNumbers = [];
-    for (let i = 0; i <= numbers.length; i++) {
+    const arrNumbers = [];
+    for (let i of numbers) {
         arrNumbers.push(i * i);
     }
     return arrNumbers;
