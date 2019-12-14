@@ -2,7 +2,7 @@ function getSpecialNumbers(m, n) {
     if (m % 3 == 0) {
         let allNumbers = [];
         for (let i = m; i < n; i++) {
-            allNumbers += m;
+            allNumbers++;
         }
         return allNumbers;
     }
