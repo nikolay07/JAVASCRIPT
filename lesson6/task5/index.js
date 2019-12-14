@@ -2,12 +2,13 @@ function squareArray(numbers) {
     if (!Array.isArray(numbers)) {
         return null;
     }
-    return Math.pow(numbers, 2);
+    let arrNumbers = [];
+    for (let i = 0; i <= numbers.length; i++) {
+        Math.pow(i, 2);
+        arrNumbers.push(i);
+    }
+    return arrNumbers;
 }
-
-
-
-
 /*
 Возведение в квадрат элементов массива
 
