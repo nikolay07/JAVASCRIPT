@@ -1,16 +1,12 @@
 function getSpecialNumbers(m, n) {
-    if (m % 3 == 0) {
-        let allNumbers = [];
-        for (let i = m; i < n; i++) {
-            allNumbers++;
+    let allNumbers = [];
+    for (let i = m; i <= n; i++) {
+        if (m % 3 == 0) {
+            allNumbers.push(i);
         }
         return allNumbers;
     }
 }
-
-
-
-
 
 /*  
 Найдите эллементы массива, которые деляться на 3 без остатка
