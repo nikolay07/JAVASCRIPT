@@ -2,7 +2,7 @@ function squareArray(numbers) {
     if (!Array.isArray(numbers)) {
         return null;
     }
-    return numbers * numbers;
+    return Math.pow(numbers, 2);
 }
 
 
