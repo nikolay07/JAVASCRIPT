@@ -1,24 +1,16 @@
 function uniqueCount(array) {
-    if (array.length == 0) {
-        return null;
-    }
     if (!Array.isArray(array)) {
         return null;
     }
-    let result = 0;
-    let countUnique = 0;
-    let count = 0;
+    let uniqueArr = [];
     for (let i = 0; i < array.length; i++) {
-        countUnique++;
-        for (let j = i + 1; j < array.length; j++) {
-            if (array[j] == array[i]) {
-                count++;
-                break;
-            }
+        if (uniqueArr.indexOf(array[i]) < 0) {
+            uniqueArr.push(array[i])
         }
     }
-    return result = countUnique - count;
+    return uniqueArr.length > 0 ? uniqueArr.length : null;
 }
+
 /*
 Нахождение уникальных
  Напишите функцию uniqueCount, которая будет находить количество уникальных чисел в массиве. 
@@ -26,6 +18,5 @@ function uniqueCount(array) {
  Длина массива > 0
 
 Сигнатура - uniqueCount(array)
-
 
 */
