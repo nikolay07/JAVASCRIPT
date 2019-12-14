@@ -1,13 +1,12 @@
 function getSpecialNumbers(m, n) {
-    let allNumbers = [];
+    let specialNumbers = [];
     for (let i = m; i <= n; i++) {
-        if (i % 3 == 0) {
-            allNumbers.push(i);
+        if (i % 3 === 0) {
+            specialNumbers.push(i);
         }
-        return allNumbers;
     }
+    return specialNumbers;
 }
-
 /*  
 Найдите эллементы массива, которые деляться на 3 без остатка
 Создайте функцию getSpecialNumbers, которая вернет массив всех чисел кратных 3 из промежутка от m до n
