@@ -1,7 +1,7 @@
 function getSpecialNumbers(m, n) {
     let allNumbers = [];
     for (let i = m; i <= n; i++) {
-        if (m % 3 == 0) {
+        if (i % 3 == 0) {
             allNumbers.push(i);
         }
         return allNumbers;
