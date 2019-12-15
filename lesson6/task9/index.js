@@ -8,13 +8,9 @@ function removeDuplicates(array) {
             newArray.push(i);
         }
     }
-    return newArray;
+    return newArray.length > 0 ? newArray : null;
 
 }
-
-
-
-
 
 /*Удаление дубликатов
 Напишите функцию removeDuplicates, которая будет удалять дубликаты с входящего массива и возвращать новый массив. Длина массива > 0
