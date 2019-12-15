@@ -4,9 +4,9 @@ function cloneArr(arr) {
         return null;
     }
     newArray = arr.slice();
-    //for (let i of arr) {
-    //    newArray[i] = cloneArr(newArray[i]);
-    //}
+    for (let i of arr) {
+        newArray[i] = cloneArr(newArray[i]);
+    }
     return newArray;
 
 }
