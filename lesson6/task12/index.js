@@ -1,9 +1,9 @@
 function cloneArr(arr) {
-    let newArray = [];
+    //let newArray = [];
     if (!Array.isArray(array)) {
         return null;
     }
-    newArray = arr.slice();
+    let newArray = arr.slice();
     for (let i of arr) {
         newArray[i] = cloneArr(newArray[i]);
     }
