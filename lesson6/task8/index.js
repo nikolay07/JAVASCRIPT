@@ -4,7 +4,7 @@ function uniqueCount(array) {
     }
     let uniqueArr = [];
     for (let i of array) {
-        if (uniqueArr.indexOf(i) < 0) {
+        if (uniqueArr.indexOf(i) > 0) {
             uniqueArr.push(i)
         }
     }
