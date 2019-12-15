@@ -12,8 +12,6 @@ function getSum(numbers) {
 
 }
 
-//const sumOfElements = getSum(numbers);
-//console.log(sumOfElements);
 /*
 Найдите сумму элементов массива
  

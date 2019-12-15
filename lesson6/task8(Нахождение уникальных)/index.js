@@ -11,6 +11,7 @@ function uniqueCount(array) {
     return uniqueArr.length > 0 ? uniqueArr.length : null;
 }
 
+
 /*
 Нахождение уникальных
  Напишите функцию uniqueCount, которая будет находить количество уникальных чисел в массиве. 
