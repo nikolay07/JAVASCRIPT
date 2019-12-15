@@ -3,15 +3,15 @@ function uniqueCount(array) {
         return null;
     }
     let uniqueArr = [];
-    for (let i = 0; i < array.length; i++) {
-        if (uniqueArr.indexOf(array[i]) < 0) {
-            uniqueArr.push(array[i])
+    for (let i of array) {
+        if (uniqueArr.indexOf(i) < 0) {
+            uniqueArr.push(i)
         }
     }
     return uniqueArr.length > 0 ? uniqueArr.length : null;
 }
 
-
+//array[i]
 /*
 Нахождение уникальных
  Напишите функцию uniqueCount, которая будет находить количество уникальных чисел в массиве. 
