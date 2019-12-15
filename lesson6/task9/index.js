@@ -4,7 +4,7 @@ function removeDuplicates(array) {
     }
     let newArray = [];
     for (let i of array) {
-        if (!newArray.includes(array[i]) < 0) {
+        if (!newArray.includes(array[i])) {
             newArray.push(array[i])
         }
     }
