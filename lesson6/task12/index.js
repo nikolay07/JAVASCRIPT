@@ -1,12 +1,8 @@
 function cloneArr(arr) {
-    //let newArray = [];
     if (!Array.isArray(array)) {
         return null;
     }
-    let newArray = arr.slice();
-    for (let i of arr) {
-        newArray[i] = cloneArr(newArray[i]);
-    }
+    const [...newArray] = arr;
     return newArray;
 
 }
