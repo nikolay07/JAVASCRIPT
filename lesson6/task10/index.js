@@ -11,7 +11,7 @@ function withdraw(clients, balances, client, amount) {
         }
         if (balances[i] > amount) {
             return balances[i] - amount;
-        } else {
+        } else if (amount > balances[i]) {
             return -1;
         }
     }
