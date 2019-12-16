@@ -9,8 +9,9 @@
           if (someMoney == i) {
               if (balances[i] >= amount) {
                   return balances[i] - amount;
+              } else {
+                  return -1;
               }
-              return -1;
 
           }
       }
