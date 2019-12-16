@@ -6,15 +6,13 @@ function withdraw(clients, balances, client, amount) {
         }
     };
     for (let i of balances) {
-        if (money == i) {
-            if (balances[i] < amount) {
-                return -1;
-            } else {
-                return balances[i] - amount;
-            }
+        if (balances[i] >= amount) {
+            return balances[i] - amount;
+        } else if (balances[i] < amount) {
+            return -1;
         }
     }
-};
+}
 
 
 /*
