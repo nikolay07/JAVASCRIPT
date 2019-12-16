@@ -1,11 +1,11 @@
   function withdraw(clients, balances, client, amount) {
       let someMoney = 0;
-      for (let i of clients) {
+      for (let i = 0; i < clients.length; i++) {
           if (clients[i] === client) {
               someMoney = i;
           }
       };
-      for (let i of balances) {
+      for (let i = 0; i < balances.length; i++) {
           if (someMoney == i) {
               if (balances[i] >= amount) {
                   return balances[i] - amount;
