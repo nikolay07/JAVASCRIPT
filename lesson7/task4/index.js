@@ -4,4 +4,3 @@ const getMessagesForBestStudents = (allStudentsNames, failedStudentsNames) =>
     .map(name => 'Good job, ' + name);
 const allStudentsNames = ['a', 'b', 'c', 'd'];
 const failedStudentsNames = ['c', 'd'];
-console.log(getMessagesForBestStudents(allStudentsNames, failedStudentsNames));
