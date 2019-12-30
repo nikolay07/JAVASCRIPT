@@ -1,3 +1,6 @@
 const squareArray = numbers => {
-    !Array.isArray(numbers) ? null : numbers.map(index => index * index);
+    if (!Array.isArray(numbers)) {
+        return null;
+    }
+    return numbers.map(index => index * index);
 }
