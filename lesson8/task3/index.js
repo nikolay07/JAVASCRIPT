@@ -1,14 +1,15 @@
-const pickProps = (obj, namesProp) => {
+function pickProps(obj, namesProp) {
     let filtrObj = {};
     namesProp.map(value => {
         for (let key of obj) {
-            if (key === value) {
+            if (key == value) {
                 filtrObj[key] = obj[key];
             }
         }
     });
     return filtrObj;
 }
+
 
 /*
 Доставание свойств из объекта
