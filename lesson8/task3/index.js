@@ -1,8 +1,8 @@
 function pickProps(obj, namesProp) {
     let filtrObj = {};
-    namesProp.map(value => {
+    namesProp.map(function(item) {
         for (let key of obj) {
-            if (key == value) {
+            if (key == item) {
                 filtrObj[key] = obj[key];
             }
         }
