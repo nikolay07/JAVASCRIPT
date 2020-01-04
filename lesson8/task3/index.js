@@ -1,13 +1,11 @@
 const pickProps = (obj, arr) => {
-    const newObject = {};
-    for (let prop in obj) {
-        for (let index of arr) {
-            if (prop === index) {
-                object[prop] = obj[prop];
-            }
+    const object = {};
+    for (let i in obj) {
+        for (let a of arr) {
+            if (i === a) object[i] = obj[i];
         }
     }
-    return newObject;
+    return object;
 };
 
 /*
