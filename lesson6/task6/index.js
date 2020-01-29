@@ -1,12 +1,13 @@
 function reverseArray(arr) {
     if (!Array.isArray(arr)) {
-        return null;
+        return null
     }
-    const [first, second, ...last] = arr;
-    return [...last, second, first];
+    let newArray = []
+    for (let i of arr) {
+        newArray.unshift(i);
+    }
+    return newArray;
 }
-
-
 
 /* Переверните массив
 
