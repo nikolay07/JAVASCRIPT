@@ -1,15 +1,5 @@
 function checker(arr) {
-    let min = 0;
-    let max = 0;
-    for (let i of arr) {
-        if (i > max) {
-            max = i;
-        }
-        if (i < min) {
-            min = i;
-        }
-    }
-    let sum = min + max;
+    let sum = Math.max(...arr) + Math.min(...arr);
     return sum > 1000 ? true : false;
 }
 
