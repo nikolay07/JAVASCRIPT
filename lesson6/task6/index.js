@@ -1,14 +1,7 @@
 function reverseArray(arr) {
-    if (!Array.isArray(arr)) {
-        return null
-    }
-    let newArray = []
-    for (let i of arr) {
-        newArray.unshift(i);
-    }
-    return newArray;
+    let newArray = arr.reverse()
+    return !Array.isArray(arr) ? null : newArray;
 }
-
 /* Переверните массив
 
 Создайте функцию reverseArray, которая будет принимать массив чисел и возвращать зеркальный массив
