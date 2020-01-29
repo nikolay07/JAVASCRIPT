@@ -26,6 +26,17 @@ function sortDesc(array) {
 }
 
 /*
+function sortAsc(arr) {
+    if (!Array.isArray) { return null }
+
+    return arr.slice().sort((a, b) => a - b);
+}
+
+function sortDesk(arr) {
+    if (!Array.isArray) { return null }
+    return arr.slice().sort((a, b) => b - a);
+}
+
 Сортировка массива
  Напишите две функции, которые будут сортировать массив чисел в порядке возрастания и убывания соответственно. 
  Возвращаемое значение - отсортированный массив. Нельзя использовать стандартные методы массивов
