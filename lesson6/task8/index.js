@@ -1,7 +1,4 @@
 function uniqueCount(array) {
-    if (!Array.isArray(array)) {
-        return null;
-    }
     let uniqueArr = [];
     for (let i of array) {
         if (uniqueArr.indexOf(i) < 0) {
