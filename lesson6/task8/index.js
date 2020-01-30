@@ -5,22 +5,23 @@
 
    /*
    Нахождение уникальных
-    Напишите функцию uniqueCount, которая будет находить количество уникальных чисел в массиве. 
-    Если число повторяется больше одного раза, то его стоит учитывать, но только один раз. 
-    Длина массива > 0
-   Сигнатура - uniqueCount(array)
+Напишите функцию uniqueCount, которая будет находить количество уникальных чисел в массиве. 
+Если число повторяется больше одного раза, то его стоит учитывать, но только один раз. 
+Длина массива > 0
+Сигнатура - uniqueCount(array)
 
-       let uniqueArr = [];   
-      for (i of array){
-           if (!newArr.includes(i)){ //
-               newArr.push(i)
-           }
-       }
-       или 
-       let uniqueArr = [];    
-       for (let i of array) {
+Примитивный метод:
+let uniqueArr = [];   
+    for (i of array){
+        if (!uniqueArr.includes(i)){ 
+            uniqueArr.push(i)
+    }
+}
+или 
+let uniqueArr = [];    
+    for (let i of array) {
        if (uniqueArr.indexOf(i) < 0) {
            uniqueArr.push(i)
        }
    }
-      */
+*/

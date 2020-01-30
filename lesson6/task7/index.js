@@ -26,17 +26,6 @@ function sortDesc(array) {
 }
 
 /*
-function sortAsc(arr) {
-    if (!Array.isArray) { return null }
-
-    return arr.slice().sort((a, b) => a - b);
-}
-
-function sortDesk(arr) {
-    if (!Array.isArray) { return null }
-    return arr.slice().sort((a, b) => b - a);
-}
-
 Сортировка массива
  Напишите две функции, которые будут сортировать массив чисел в порядке возрастания и убывания соответственно. 
  Возвращаемое значение - отсортированный массив. Нельзя использовать стандартные методы массивов
@@ -46,4 +35,15 @@ function sortDesk(arr) {
 P.S. Сортировку массива на практике с нуля пишут крайне мало, почти никогда. 
 Написать ее с нуля для новичка тоже не простая задача. 
 Поэтому в задании приемлемо если вы найдете решение в интернете, предварительно разберетесь в нем и проверите на сайте
+С помощью методов:
+function sortAsc(arr) {
+    let sortedAsc = arr.slice().sort((a, b) => a - b);
+    return !Array.isArray(arr) ? null : sortedAsc;
+}
+
+function sortDesk(arr) {
+    let sortedDesk =  arr.slice().sort((a, b) => b - a)
+    eturn !Array.isArray(arr) ? null : sortedDesk;
+}
+
 */

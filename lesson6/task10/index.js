@@ -12,5 +12,17 @@ Withdraw
 То есть у клиента по индексу 2 с массива clients, баланс счета - это значение по индексу 2 с массива balances
 Сигнатура - withdraw(clients, balances, client, amount)
 На вход гарантировано приходит массив строк, массив чисел, строка (имя клиента) и число (сумма на снятие)
+Примитивный метод:
+     let newBalance = 0;
+    for (let i of clients) {
+        if (clients[i] === client) {
+            newBalance = i;
+        }
+    }
+    for (let j in balances) {
+        if (newBalance == j) {
+            return balances[j] >= amount ? (balances[j] - amount) : -1
+        }
+    }
 
 */
