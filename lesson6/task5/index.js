@@ -1,17 +1,12 @@
 function squareArray(numbers) {
-    if (!Array.isArray(numbers)) {
-        return null;
-    }
-    const arrNumbers = [];
-    for (let i of numbers) {
-        arrNumbers.push(i * i);
-    }
-    return arrNumbers;
+    let arrNumbers = numbers.map((a) => a * a);
+    return !Array.isArray(numbers) ? null : arrNumbers;
 }
 /*
 Возведение в квадрат элементов массива
 
-Создайте функцию squareArray, которая будет принимать массив чисел и возвращать массив с числами возведенными в квадрат
+Создайте функцию squareArray, которая будет принимать массив чисел и возвращать массив с числами 
+возведенными в квадрат
 
 Основные требования:
 Функция должна называться squareArray
