@@ -6,9 +6,8 @@ const transformToObject = arr => {
     return obj
 }
 const arr = ['a', 17.1, 'John Doe'];
-const arr1 = [];
 const result = transformToObject(arr);
-const result1 = transformToObject(arr1);
+
 
 /* Создание объектов
  

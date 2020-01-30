@@ -1,12 +1,11 @@
 const getMessagesForBestStudents = (allStudentsNames, failedStudentsNames) =>
-    allStudentsNames
-    .filter(name => !failedStudentsNames.includes(name))
-    .map(name => 'Good job, ' + name);
-const allStudentsNames = ['a', 'b', 'c', 'd'];
-const failedStudentsNames = ['c', 'd'];
+    allStudentsNames.filter(name => !failedStudentsNames.includes(name))
+const happyStudenrs = allStudentsNames.map(name => 'Good job, ' + name);
+const allStudentsNames = ['ann', 'bob', 'chak', 'devid'];
+const failedStudentsNames = ['cherry', 'denis'];
 
 /*
-Деструктуризация массива и спред прератор
+Деструктуризация массива и спред орератор
 
 Создайте функцию getMessagesForBestStudents, которая будет генерировать сообщения для студентов, которые сдали экзамен
 
@@ -16,4 +15,14 @@ const failedStudentsNames = ['c', 'd'];
 Функция должна выбрать имена, которые есть в первом массиве, но нет во втором и вернуть новый массив, элементы которого - строки, которые содержат сообщение вида 'Good job, Ann'. Где Ann - это имя, которое есть в первом массиве, но нет во втором
 Исходные массивы не должны меняться
 Условный пример работы ф-ции: ['a', 'b', 'c', 'd'], ['b', 'd'] -> ['Good job, a', 'Good job, c']
+
+Более расписаный вариант:
+function getMessagesForBestStudents (allStudentsNames, failedStudentsNames){
+    const passedStudents = allStudentsNames.filter(name => !failedStudentsNames.includes(name))
+    const messages = passedStudents.map(name => 'Good job, ' + name);
+    return messages;
+}
+
+
+
 */

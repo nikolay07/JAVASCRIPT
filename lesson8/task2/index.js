@@ -3,17 +3,16 @@ const user = {
     age: 17,
     interest: 'football'
 }
-const user1 = {};
-
 const concatProps = obj => {
     let arr = [];
     for (let key in obj) {
         arr = arr.concat(obj[key]);
+        // arr = arr.concat(obj[key])
     }
     return arr;
 }
 console.log(concatProps(user));
-console.log(concatProps(user1));
+
 
 /*
 Перебор свойств объектов
