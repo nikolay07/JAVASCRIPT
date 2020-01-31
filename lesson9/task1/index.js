@@ -19,6 +19,7 @@ function getAdults(users) {
 3. Для пустого объекта ф-ция должна вернуть пустой массив
 4. Пример работы: { 'John Doe': 19, 'Tom': 17, 'Bob': 18 } => ['John Doe', 'Bob']
 
+Object.entries() - переводит объект в массив масивов.
 Упрощенный вариант:
 const adultUsers = Object.entries(users).filter(user => user[1] >= 18).map(user => user[0])
      return adultUsers;
