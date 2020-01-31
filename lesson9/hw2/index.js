@@ -19,7 +19,7 @@ const rooms = {
 function getPeople(rooms) {
 
     const roomToArray = Object.values(rooms);
-    const discloseArraysOfArr = roomToArray.reduce((acc, el) => acc.concat(el), [])
+    const discloseArraysOfArr = roomToArray.flat()
     const arrListPeople = discloseArraysOfArr.map((a) => a.name);
 
     return arrListPeople;
