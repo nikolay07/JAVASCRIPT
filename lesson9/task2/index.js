@@ -13,4 +13,5 @@ function copyObj(object) {
 
 Проще вариант: 
 const copyObj = (object) => Object.assign({}, object)
+или const copyObj = {...objec}
 */
