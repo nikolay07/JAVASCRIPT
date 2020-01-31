@@ -16,9 +16,7 @@ const object = {
 function getCustomersList(object) {
     const copyObj = Object.assign({}, object)
     const objectToArray = Object.entries(copyObj)
-    console.log(objectToArray);
     const addIdValue = objectToArray.map((a) => ({ id: a[0], ...a[1] }))
-    console.log(addIdValue)
     const sortArrayOfObjects = addIdValue.sort((a, b) => a.age - b.age)
     return sortArrayOfObjects;
 }
@@ -38,7 +36,7 @@ console.log(getCustomersList(object));
 Решаем.
 1.Скопировать объект в новый объект
 2.Перевести массив в объект.
-3. Деструктурируем массив и превращаем его в объект добавляя id: a[0]
+3. Деструктурируем массивы массива и превращаем их в объекты добавляя id: a[0]
 4. Отсортировать массив объекта по значению age.
 
 */
