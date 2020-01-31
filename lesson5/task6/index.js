@@ -1,11 +1,12 @@
 function getPrimes(n) {
-    for (let i = 1; i <= n; i++) {
-        if (i % 1 === 0 && i % i === 0) {
-            console.log(i);
+    next: for (let i = 2; i <= n; i++) {
+
+        for (let j = 2; j < i; j++) {
+            if (i % j == 0) continue next;
         }
+        console.log(i);
     }
 }
-
 /*
 Простые числа
 Создайте ф-цию, которая ищет все простые числа от 1 до n. Число является простым, если оно
