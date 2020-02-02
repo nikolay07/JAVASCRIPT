@@ -1,14 +1,14 @@
 function getRandomNumbers(length, min, max) {
-    if (Math.ceil(max) === Math.ceil(min) && max < min && length <= 0 && (max - min < 1)) {
+    if (Math.floor(max) <= Math.ceil(min) && length <= 0 && (max - min < 1)) {
         return null;
     }
     const defaultArr = []
     for (let i = min; i < length; i++) {
-        defaultArr[i] = (Math.floor(Math.random() * (max - min)) + min);
-
-
+        if (defaultArr.length <= length) {
+            defaultArr[i] = (Math.floor(Math.random() * (max - min)) + min);
+        }
+        return defaultArr;
     }
-    return defaultArr;
 }
 
 
