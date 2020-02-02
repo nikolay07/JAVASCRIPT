@@ -1,5 +1,5 @@
 function getRandomNumbers(length, min, max) {
-    if (max < min && length < 1 && defaultArr.length > length) {
+    if (Math.ceil(max) === Math.ceil(min) && max < min && length < 1 && defaultArr.length > length) {
         return null
     }
     const defaultArr = []
