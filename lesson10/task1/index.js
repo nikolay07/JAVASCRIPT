@@ -1,5 +1,3 @@
-numbers = [NaN, 10.1, 11, '17', 7, 'text', -'87', 0, '14.5']
-
 function getFiniteNumbers(numbers) {
     const result = numbers.slice().filter(a => Number.isFinite(a))
     return result;
@@ -51,4 +49,5 @@ Number.isFinite
 6. Во всех ф-циях исходный массив должен оставаться неизменным
 7. Сравните результаты работы методов Number.isNaN vs isNaN и Number.isFinite vs isFinite
 
+//numbers = [NaN, 10.1, 11, '17', 7, 'text', -'87', 0, '14.5']
 */
