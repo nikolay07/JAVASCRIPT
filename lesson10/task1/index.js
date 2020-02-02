@@ -1,7 +1,7 @@
 numbers = [NaN, 10.1, 11, '17', 7, 'text', -'87', 0, '14.5']
 
 function getFiniteNumbers(numbers) {
-    const result = numbers.slice().filter(number => Number.isFinite(number))
+    const result = numbers.slice().filter(a => Number.isFinite(a))
     return result;
 }
 console.log(getFiniteNumbers(numbers))
