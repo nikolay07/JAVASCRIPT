@@ -1,7 +1,7 @@
 function getRandomNumbers(length, min, max) {
-    let defaultArr = []
+    const defaultArr = []
     for (let i = min; i < length; i++) {
-        if (Math.ceil(max) > Math.ceil(min) && length > 0) {
+        if (max > min && length > 1 && defaultArr.length <= length) {
             defaultArr.push(Math.floor(Math.random() * (max - min + 1)) + min)
         }
     }
