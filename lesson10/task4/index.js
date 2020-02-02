@@ -3,7 +3,8 @@ const arr = [-777, 3, -1, 45, -20]
 function getMaxAbsoluteNumber(arr) {
     const absolute = arr.map((a) => Math.abs(a))
     const max = Math.max(...absolute)
-    return arr.length == 0 ? null : max;
+    return (!Array.isArray(arr) || arr.length == 0) ? null : max;
+
 }
 console.log(getMaxAbsoluteNumber(arr));
 
