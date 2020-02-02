@@ -1,10 +1,12 @@
+const number = 3.156
+
 function multiRound(number) {
-    const floor = Math.floor(number);
-    const round = Math.round(number);
-    const ceil = Math.ceil(number);
-    const trunc = Math.trunc(number);
-    const toFixed = Number(number.toFixed(2));
-    return [floor, round, ceil, trunc, toFixed]
+    return [Math.floor(number * 100) / 100,
+        Math.round(number * 100) / 100,
+        Math.ceil(number * 100) / 100,
+        Math.trunc(number * 100) / 100,
+        Number(number.toFixed(2))
+    ]
 }
 
 console.log(multiRound(number));
@@ -26,5 +28,5 @@ console.log(multiRound(number));
 4. Первый элемент - результат округления с помощью Math.trunc
 5. Первый элемент - результат округления с помощью .toFixed
 4. Все элементы результирующего массива должны быть числами
-const number = 3.145;
+
 */
