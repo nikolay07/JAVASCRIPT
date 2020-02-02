@@ -4,7 +4,7 @@ function getRandomNumbers(length, min, max) {
     }
     let defaultArr = []
     for (let i = 0; i < length; i++) {
-        defaultArr[i] = Math.trunc((Math.random() * (max - min + 1) + min));
+        defaultArr[i] = Math.trunc((Math.random() * (max - min) + min));
     }
     return defaultArr;
 }
