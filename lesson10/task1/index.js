@@ -1,31 +1,34 @@
+const numbers = []
+
 function getFiniteNumbers(numbers) {
-    const result = numbers.slice().filter(a => Number.isFinite(a))
-    return result;
+    return numbers.slice().filter(a => Number.isFinite(a))
 }
-console.log(getFiniteNumbers(numbers))
+
 
 function getFiniteNumbersV2(numbers) {
-    const result = numbers.slice().filter((a) => isFinite(a))
-    return result;
+    return numbers.slice().filter((a) => isFinite(a));
 }
-console.log(getFiniteNumbersV2(numbers))
+
 
 function getNaN(numbers) {
-    const result = numbers.slice().filter((a) => Number.isNaN(a))
-    return result;
+    return numbers.slice().filter((a) => Number.isNaN(a))
+
 }
-console.log(getNaN(numbers))
+
 
 function getNaNV2(numbers) {
-    const result = numbers.slice().filter((a) => isNaN(a))
-    return result;
+    return numbers.slice().filter((a) => isNaN(a))
 }
-console.log(getNaNV2(numbers))
+
 
 function getIntegers(numbers) {
-    const result = numbers.slice().filter((a) => Number.isInteger(a))
-    return result;
+    return numbers.slice().filter((a) => Number.isInteger(a))
 }
+
+console.log(getFiniteNumbers(numbers))
+console.log(getFiniteNumbersV2(numbers))
+console.log(getNaN(numbers))
+console.log(getNaNV2(numbers))
 console.log(getIntegers(numbers))
 
 console.log(numbers)
