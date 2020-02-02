@@ -3,7 +3,7 @@ function getRandomNumbers(length, min, max) {
         return null;
     }
     let defaultArr = []
-    for (let i = min; i < length; i++) {
+    for (let i = 0; i < length; i++) {
         defaultArr[i] = Math.floor((Math.random() * (max - min) + min));
     }
     return defaultArr;
