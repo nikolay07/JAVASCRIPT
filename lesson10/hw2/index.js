@@ -1,14 +1,13 @@
 function getRandomNumbers(length, min, max) {
-    if ((Math.floor(max) === Math.ceil(min) && max - min < 1) || length <= 0 || max < min) {
+    if ((Math.floor(max) === Math.ceil(min) && (max - min < 1)) || length <= 0 || max < min) {
         return null;
     }
-    const defaultArr = []
+    let defaultArr = []
     for (let i = min; i < length; i++) {
-        defaultArr[i] = (Math.floor(Math.random() * (max - min)) + min);
+        defaultArr[i] = Math.floor((Math.random() * (max - min) + min));
     }
     return defaultArr;
 }
-
 
 /*
 Массив случайных чисел
