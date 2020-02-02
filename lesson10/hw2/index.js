@@ -4,12 +4,11 @@ function getRandomNumbers(length, min, max) {
     }
     let defaultArr = []
     for (let i = 0; i < length; i++) {
-        if (defaultArr.length == length) {
-            defaultArr[i] = Math.floor((Math.random() * (max - min) + min));
-        }
-        return defaultArr;
+        defaultArr[i] = Math.trunc((Math.random() * (max - min + 1) + min));
     }
+    return defaultArr;
 }
+
 
 /*
 Массив случайных чисел
