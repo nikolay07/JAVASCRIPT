@@ -1,4 +1,4 @@
-const arr = [];
+const arr = []
 let length = arr.length;
 
 function getRandomNumbers(length, min, max) {
@@ -6,14 +6,18 @@ function getRandomNumbers(length, min, max) {
         return null;
     }
     let defaultArr = []
-    for (let i = 0; i < length; i++) {
-        defaultArr[i] = Math.trunc((Math.random() * (max - min) + min));
-    }
+    let randomNum = Math.trunc(Math.random() * (max - min) + min)
+    arr.forEach(a => defaultArr.push(randomNum))
+
     return defaultArr;
 }
+console.log(getRandomNumbers(10, 1.21, 16.5))
 
+/* 
 
-/*
+for (let i = 0; i < length; i++) {
+        defaultArr[i] = Math.trunc(Math.random() * (max - min) + min);
+    }
 Массив случайных чисел
 
 Создайте функцию, которая будет возвращать массив целых случайных чисел из заданного
