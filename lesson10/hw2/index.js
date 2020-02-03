@@ -1,3 +1,6 @@
+const arr = [];
+let length = arr.length;
+
 function getRandomNumbers(length, min, max) {
     if ((Math.ceil(max) === Math.ceil(min) && (max - min < 1)) || length <= 0 || max < min) {
         return null;
