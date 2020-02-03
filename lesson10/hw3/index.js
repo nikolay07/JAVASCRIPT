@@ -1,16 +1,14 @@
-const num = 0;
-const roundAcc = 0;
-
-function superRound(num, roundAcc) {
+function superRound(num, n) {
+    const index = Math.pow(10, n);
     return [
-        Math.floor(num),
-        Math.round(num),
-        Math.ceil(num),
-        Math.trunc(num),
-        Number(number.toFixed(2))
+        Math.floor(num * index) / index,
+        Math.round(num * index) / index,
+        Math.ceil(num * index) / index,
+        Math.trunc(num * index) / index,
+        Number(num.toFixed(n))
     ]
 }
-
+console.log(superRound(1.456, 2));
 /*
 Округление чисел до указанной точности
 
