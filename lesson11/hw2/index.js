@@ -1,5 +1,5 @@
-let strNew = '';
-let strSearch = '';
+let strSearch = 'tha'
+let strNew = 'there thara there tham then';
 
 function countOccurrences(strSearch, strNew) {
     return strNew === '' ? null : strNew.split(strSearch).length - 1;
@@ -17,6 +17,5 @@ console.log(countOccurrences(strSearch, strNew));
 4. Функция должна вернуть число вхождений строки из второго аргумента в строке из первого
 аргумента ф-ции
 5. Если вторым аргументом передана пустая строка, то ф-ция должна вернуть null
-let strSearch = 'th'
-let strNew = 'There thara there tham then';
+
 */
