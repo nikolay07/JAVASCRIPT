@@ -1,8 +1,8 @@
-let strSearch = 'aa'
 let strNew = 'aa bb cc';
+let strSearch = 'aa'
 
-function countOccurrences(strSearch, strNew) {
-    return strNew.length === 0 ? null : strNew.split(strSearch).length - 1;
+function countOccurrences(strNew, strSearch) {
+    return strNew.length === 0 ? null : strSearch.split(strNew).length - 1;
 }
 console.log(countOccurrences(strSearch, strNew));
 
