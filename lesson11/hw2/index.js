@@ -1,3 +1,6 @@
+let strNew = '';
+let strSearch = '';
+
 function countOccurrences(strSearch, strNew) {
     return strNew === '' ? null : strNew.split(strSearch).length - 1;
 }
