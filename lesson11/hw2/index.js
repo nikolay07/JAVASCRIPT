@@ -2,7 +2,7 @@ let strSearch = 'tha'
 let strNew = 'there thara there tham then';
 
 function countOccurrences(strSearch, strNew) {
-    return strNew === '' ? null : strNew.split(strSearch).length - 1;
+    return strNew.length === 0 ? null : strNew.split(strSearch).length - 1;
 }
 console.log(countOccurrences(strSearch, strNew));
 
