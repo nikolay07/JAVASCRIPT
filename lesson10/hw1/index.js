@@ -5,3 +5,7 @@ function getTotalPrice(arr) {
     return '$' + (Math.floor(sum * 100) / 100);;
 }
 console.log(getTotalPrice(arr));
+
+
+/*Сумма дробных чисел
+ */

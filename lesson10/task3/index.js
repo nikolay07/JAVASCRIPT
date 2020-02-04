@@ -14,6 +14,6 @@ console.log(multiRound(number));
 
 
 /*
-
+Округление чисел
 
 */

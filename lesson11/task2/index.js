@@ -5,3 +5,6 @@ function sortContacts(arr, bool = true) {
     return bool ? arr.sort((a, b) => a.name.localeCompare(b.name)) : arr.sort((a, b) => b.name.localeCompare(a.name));
 }
 console.log(sortContacts(arr, false));
+/*
+Сортировка строк
+*/

@@ -11,6 +11,5 @@ function getMaxAbsoluteNumber(arr) {
 console.log(getMaxAbsoluteNumber(arr));
 
 /*
-
-
+Поиск максимального числа
 */

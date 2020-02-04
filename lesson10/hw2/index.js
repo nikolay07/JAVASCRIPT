@@ -14,3 +14,7 @@ function getRandomNumbers(length, min, max) {
     return defaultArr;
 }
 console.log(getRandomNumbers(10, 1.21, 16.5))
+
+/* 
+Массив случайных чисел
+*/

@@ -34,7 +34,7 @@ console.log(getIntegers(numbers))
 console.log(numbers)
 
 /*
-
+Проверка чисел
 
 //numbers = [NaN, 10.1, 11, '17', 7, 'text', -'87', 0, '14.5']
 */

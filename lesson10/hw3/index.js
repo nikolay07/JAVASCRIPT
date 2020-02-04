@@ -9,3 +9,6 @@ function superRound(num, n) {
     ]
 }
 console.log(superRound(1.456, 2));
+/*
+Округление чисел до указанной точности
+*/

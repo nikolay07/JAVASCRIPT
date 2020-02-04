@@ -26,5 +26,7 @@ console.log(arr);
 
 
 /*
+Парсинг чисел
+
 const arr = [4, 5.6, ' 5.7kl', null, Infinity, undefined];
 */

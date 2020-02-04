@@ -13,3 +13,6 @@ function splitText(str, num = 10) {
     return manyStrings.join('\n');
 }
 console.log(splitText('abcdasdfds fgggghhhhffghh', 3));
+
+/*Разбить текст на строки
+ */
