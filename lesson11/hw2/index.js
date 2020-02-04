@@ -1,10 +1,11 @@
-let strSearch = 'tha'
-let strNew = 'there thara there tham then';
+let strSearch = 'aa'
+let strNew = 'aa bb cc';
 
 function countOccurrences(strSearch, strNew) {
     return strNew.length === 0 ? null : strNew.split(strSearch).length - 1;
 }
 console.log(countOccurrences(strSearch, strNew));
+
 
 /*
 Количество вхождений подстроки в строку
