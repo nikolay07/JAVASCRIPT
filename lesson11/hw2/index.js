@@ -3,7 +3,7 @@ let strNew = 'There thara there tham then';
 
 function countOccurrences(strSearch, strNew) {
     if (strNew === '') { return null }
-    let countOccurrence = (strNew.split(strSearch).length - 1);;
+    let countOccurrence = strNew.split(strSearch).length - 1;
     return countOccurrence;
 }
 console.log(countOccurrences(strSearch, strNew));
