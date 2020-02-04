@@ -2,7 +2,7 @@ let strNew = 'aa bb cc';
 let strSearch = 'aa'
 
 function countOccurrences(strNew, strSearch) {
-    return strNew.length === 0 ? null : strNew.split(strSearch).length - 1;
+    return strSearch.length === 0 ? null : strNew.split(strSearch).length - 1;
 }
 console.log(countOccurrences(strNew, strSearch));
 
