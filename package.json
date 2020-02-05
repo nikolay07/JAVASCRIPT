@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/nikolay07/JAVASCRIPT/issues"
   },
-  "homepage": "https://github.com/nikolay07/JAVASCRIPT#readme"
+  "homepage": "https://github.com/nikolay07/JAVASCRIPT#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4"
+  }
 }
