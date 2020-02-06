@@ -3,8 +3,7 @@ export default function createMessenger() {
     let sender = 'Gromcode';
 
     function sendMessage(name) {
-        let text = `${name}, ${message}! Your ${sender}`;
-        console.log(text);
+        console.log(`${name}, ${message}! Your ${sender}`);
     }
 
     function setMessage(boldMassage) {
