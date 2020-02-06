@@ -1,41 +1,27 @@
 export function createLogger() {
     let logger = [];
 
-    function warn(warning) {
-        return logger.push({
-            message: string,
-            dateTime: new Date(),
-            type: 'warn',
-        });
+    const warn = (warning) => {
+        return logger.push({ message: warning, dateTime: new Date(), type: 'warn', });
     }
 
-    function error(error) {
-        return logger.push({
-            message: error,
-            dateTime: new Date(),
-            type: 'error',
-        });
+    const error = (error) => {
+        return logger.push({ message: error, dateTime: new Date(), type: 'error', });
     }
 
-    function log(message) {
-        return logger.push({
-            message,
-            dateTime: new Date(),
-            type: 'log',
-        })
+    const log = (message) => {
+        return logger.push({ message, dateTime: new Date(), type: 'log', })
     }
 
-    function getRecords(string) {
+    const getRecords = (string) => {
         if (!string) { return logger };
         return logger.filter((a) => a.type === string).sort((a, b) => a.dateTime - b.dateTime);
-
-        return {
-            warn,
-            error,
-            log,
-            getRecords,
-        }
-
+    }
+    return {
+        warn,
+        error,
+        log,
+        getRecords,
     }
 }
 
