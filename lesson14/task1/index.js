@@ -8,6 +8,3 @@ export function sendMessage(name) {
 function setMessage(newMassage) {
     return message = newMassage;
 }
-sendMessage('Ann');
-setMessage('Good job');
-sendMessage('Ann');
