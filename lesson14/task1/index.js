@@ -1,3 +1,5 @@
+'use strict'
+
 let message = 'Just learn it';
 
 export function sendMessage(name) {
@@ -5,6 +7,6 @@ export function sendMessage(name) {
     console.log(`${name}, ${message}! Your ${sender}`);
 }
 
-function setMessage(newMassage) {
-    return message = newMassage;
+export function setMessage(newMassage) {
+    message = newMassage;
 }
