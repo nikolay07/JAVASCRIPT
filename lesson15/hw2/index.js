@@ -1,23 +1,23 @@
 export function createLogger() {
     let logger = [];
 
-    warn: function warn(string) {
+    function warn(string) {
         return logger.push({
             message: string,
             dateTime: new Date(),
             type: 'warn',
-        })
+        });
     }
 
-    error: function error(string) {
+    function error(string) {
         return logger.push({
             message: string,
             dateTime: new Date(),
             type: 'error',
-        })
+        });
     }
 
-    log: function log(string) {
+    function log(string) {
         return logger.push({
             message: string,
             dateTime: new Date(),
@@ -25,17 +25,17 @@ export function createLogger() {
         })
     }
 
-    getRecords: function getRecords(message) {
-        if (string === undefined) { return logger }
+    function getRecords(message) {
+        if (!message) { return logger };
         return logger.sort((a, b) => a.dateTime - b.dateTime);
-        if (type === undefined) {
-            return {
-                warn,
-                error,
-                log,
-                getRecords,
-            }
+
+        return {
+            warn,
+            error,
+            log,
+            getRecords,
         }
+
     }
 }
 
