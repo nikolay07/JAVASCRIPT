@@ -1,5 +1,3 @@
-'use strict'
-
 export default function createMessenger() {
     let message = 'Just learn it';
     let sender = 'Gromcode';
@@ -9,12 +7,12 @@ export default function createMessenger() {
         console.log(text);
     }
 
-    function setMessage(newMassage) {
-        message = newMassage.bold();
+    function setMessage(boldMassage) {
+        message = boldMassage.bold();
     }
 
-    function setSender(textBold) {
-        sender = sender.bold()
+    function setSender(senderBold) {
+        sender = senderBold.bold()
     }
     return {
         sendMessage,
