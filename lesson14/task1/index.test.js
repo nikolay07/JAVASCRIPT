@@ -1,1 +1,0 @@
-import { sendMessage } from './index'
