@@ -1,18 +1,13 @@
 let message = 'Just learn it';
 
-function sendMessage(name) {
+export function sendMessage(name) {
     const sender = 'Gromcode';
-    console.log(`${name}, ${message}! Your ${sender}`)
+    return console.log(`${name}, ${message}! Your ${sender}`);
 }
 sendMessage('Ann');
 
 function setMessage(newMassage) {
-    message = newMassage;
+    return message = newMassage;
 }
 setMessage('Good job');
 sendMessage('Ann');
-
-/*
-Лексическое окружение
-
-*/
