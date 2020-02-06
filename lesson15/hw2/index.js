@@ -1,7 +1,7 @@
 export function createLogger() {
     let logger = [];
 
-    function warn(string) {
+    let warn = function(string) {
         return logger.push({
             message: string,
             dateTime: new Date(),
@@ -9,7 +9,7 @@ export function createLogger() {
         })
     }
 
-    function error(string) {
+    let error = function(string) {
         return logger.push({
             message: string,
             dateTime: new Date(),
@@ -17,7 +17,7 @@ export function createLogger() {
         })
     }
 
-    function log(string) {
+    let log = function(string) {
         return logger.push({
             message: string,
             dateTime: new Date(),
