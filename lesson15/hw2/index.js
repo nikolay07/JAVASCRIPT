@@ -1,7 +1,7 @@
 export function createLogger() {
     let logger = [];
 
-    let warn = function(string) {
+    warn: function warn(string) {
         return logger.push({
             message: string,
             dateTime: new Date(),
@@ -9,7 +9,7 @@ export function createLogger() {
         })
     }
 
-    let error = function(string) {
+    error: function error(string) {
         return logger.push({
             message: string,
             dateTime: new Date(),
@@ -17,7 +17,7 @@ export function createLogger() {
         })
     }
 
-    let log = function(string) {
+    log: function log(string) {
         return logger.push({
             message: string,
             dateTime: new Date(),
@@ -25,7 +25,7 @@ export function createLogger() {
         })
     }
 
-    function getRecords() {
+    getRecords: function getRecords(message) {
         if (string === undefined) { return logger }
         return logger.sort((a, b) => a.dateTime - b.dateTime);
         if (type === undefined) {
