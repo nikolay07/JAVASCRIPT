@@ -38,7 +38,7 @@ it('should get comparison if the second amount is greater', () => {
 });
 it('should get comparison if the first amount is a string', () => {
     const result = compareSums('2', 1, 7, 9);
-    expect(result).toEqual(true);
+    expect(result).toEqual(false);
 });
 
 it('should get number of multiples of 2', () => {

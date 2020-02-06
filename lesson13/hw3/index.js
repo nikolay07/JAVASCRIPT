@@ -15,9 +15,16 @@ export const increaser = (a, index) => {
 
 export const compareSums = (a, b, c, d) => {
 
-    return (a + b) > (c + d) ? true : false;
+    return sum(a, b) > sum(c, d) ? true : false;
 }
 
+function sum(from, to) {
+    let sum = 0;
+    for (let i = from; i <= to; i++) {
+        sum += i;
+    }
+    return sum;
+}
 export const findDivCount = (a, b, n) => {
     let sum = 0;
     for (let i = a; i <= b; i++) {
