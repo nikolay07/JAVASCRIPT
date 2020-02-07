@@ -107,7 +107,7 @@ function defer(func, ms) {
     }
 }
 const user = {
-    name: 'Tom';
+    name: 'Tom',
     sayHi() {
         console.log(`Hi, I'm ${this.name}!`);
     }
@@ -128,7 +128,7 @@ function defer(func, ms) {
     }
 }
 const user = {
-    name: 'Tom';
+    name: 'Tom',
     sayHi() {
         console.log(`Hi, I'm ${this.name}!`);
     }
