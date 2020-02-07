@@ -1,4 +1,4 @@
-export const callbackPromt = {
+export const callbackPrompt = {
     message: 'Tell me your number',
     showPromt() {
         const phoneNumber = prompt(this.message);
@@ -8,4 +8,4 @@ export const callbackPromt = {
         setTimeout(() => this.showPromt(), ms)
     }
 };
-callbackPromt.showDefferedPromt(1000);
+callbackPrompt.showDefferedPromt(1000);
