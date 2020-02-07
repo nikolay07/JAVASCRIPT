@@ -1,8 +1,7 @@
 export function createArrayOfFunctions(num) {
     let arr = [];
-    if (typeof num !== 'number') { return null }
-    if (num === undefined) { return arr }
-
+    if (num === undefined) { return [] };
+    if (typeof num !== 'number') { return null };
     for (let i = 0; i < num; i++) {
         arr[i] = function() {
             return i;
@@ -10,7 +9,7 @@ export function createArrayOfFunctions(num) {
     }
     return arr;
 }
-console.log(createArrayOfFunctions(9)[5]());
+console.log(createArrayOfFunctions());
 
 /*
 
