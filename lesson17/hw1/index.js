@@ -2,7 +2,7 @@ export const user = {
     firstName: 'name',
     lastName: 'lastName',
     getFullName() {
-        let fullName = `${firstName} ${lastName}`;
+        let fullName = `${this.firstName} ${this.lastName}`;
         return fullName;
     },
     setFullName(fullName) {
