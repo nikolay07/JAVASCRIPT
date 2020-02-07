@@ -9,8 +9,8 @@ export function createLogger() {
         return logger.push({ message: error, dateTime: new Date(), type: 'error', });
     }
 
-    const log = (message) => {
-        return logger.push({ message, dateTime: new Date(), type: 'log', })
+    const log = (log) => {
+        return logger.push({ message: log, dateTime: new Date(), type: 'log', })
     }
 
     const getRecords = (string) => {
