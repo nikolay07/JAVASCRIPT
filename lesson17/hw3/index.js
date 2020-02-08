@@ -1,12 +1,7 @@
-export const bind = (func, context, argn1, arg2) => {
+export const bind = function(func, context) {
+    let bindArgs = [].slice.call(arguments, 2);
     return function() {
-        func.apply(this, arguments);
-    }
+        let funcArgs = [].slice.call(arguments);
+        return func.apply(context, bindArgs.concat(funcArgs));
+    };
 };
-const fixCont = {
-    fixedArg() {
-        console.log(`${this}`);
-    }
-}
-const newBind = bind(fixCont.fixedArg);
-newBind.call();
