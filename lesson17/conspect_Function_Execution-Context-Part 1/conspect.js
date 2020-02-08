@@ -1,53 +1,51 @@
 //Методы объектов//
 
 export const user = {
-    firstName: 'name',
-    lastName: 'lastName',
-    getFullName() { //можно записывать без слова function;
-        return (`${this.firstName} ${this.lastName}`) //this.firstName = user.firstName тоже самое;
+    firstName: 'Leonardo',
+    lastName: 'Decaprio',
+    getFullName() {
+        return (`${this.firstName} ${this.lastName}`) //(this.firstName = user.firstName тоже самое)
     }
 };
-user.getFullName(); // выводит 'name lastName' - this сработает когда ссылаешся напрямую;
-//если присвоить:
+user.getFullName(); //'Leonardo Decaprio' (this работает только когда ссылаешся напрямую)
+//но если присвоить:
 const func = user.getFullName();
-func(); //выведет 'undefined undefined' - ПОТЕРЯ КОНТЕКСТ - this не сработал!
+func(); //'undefined undefined' (ПОТЕРЯ КОНТЕКСТА- this не сработает!)
 ______________________________________________________
-// метод .bind() - позволяет ;жестко привязать контекст this и дальше его поменять нельзя;
+// метод .bind() - позволяет жестко привязать контекст this и дальше его поменять нельзя;
 сonst user = {
     firstName: 'Bob',
     getFullName() {
         return (`${this.firstName}`);
     }
 };
-
 const func = user.getFullName().bind(user);
-func(); // выводит 'Bob' - this сработает
+func(); //'Bob' (this сработает)
 
 //можно менять также внутри объекта
 const func = user.getFullName().bind({ firstName: 'Tom' });
-func(); // выводит 'Tom'
+func(); //'Tom'
 ______________________________________________________
-const user1 = {
+const user = {
     name: 'Bob',
     sayHi(age, message) {
         console.log(`${message}. I'm ${this.name}. I'm ${age} years old`);
     }
 };
-const func = user.sayHi(17, 'Hello');
-// Hello. I'm Bob. I'm 17 years old
+const func = user.sayHi(17, 'Hello'); // "Hello. I'm Bob. I'm 17 years old"
 
 const func = user.sayHi();
 func(17, 'Hello');
-// Hello. I'm . I'm 17 years old  -- контекст this потерян
+// "Hello. I'm . I'm 17 years old"  (контекст this потерян)
 
 //метод .call()
 const func = user.sayHi();
-func.call({ name: 'Tom' }, 17, 'Hello'); //Hello. I'm . I'm 17 years old -- принимает агументы через запятую;
+func.call({ name: 'Tom' }, 17, 'Hello'); //"Hello. I'm . I'm 17 years old" ( метод принимает агументы через запятую)
 
 //метод .apply()
 const func = user.getFullName();
 func.apply({ name: 'Tom', [17, 'Hello'] });
-// Hello. I'm . I'm 17 years old -- принимает агументы в ввиде массива [];
+// "Hello. I'm . I'm 17 years old" (принимает агументы в ввиде массива [])
 ______________________________________________________
 // callbackPromt
 
@@ -55,13 +53,13 @@ const callbackPromt = {
     message: 'Tell me your number',
     showPromt() {
         const phoneNumber = prompt(this.message);
-        console.log(phoneNumber); // выведет в консоль все что введешь в окно 'Tell me your number';
+        console.log(phoneNumber); //'Tell me your number'/=> выведет в консоль все что введешь в окно ;
     },
     showDefferedPromt(ms) {
         setTimeout(this.showPromt, ms) // устанавливает задержку для вызова showPromt в ms
     }
 };
-callbackPromt.showDefferedPromt(1000); //выведет с задеркой 1000 ms в консоль тоб что введешь в окно 'This page says'  -- контекст из showPromt потерян;
+callbackPromt.showDefferedPromt(1000); //выведет с задеркой 1000 ms в консоль то, что введешь в окно 'This page says'  -- контекст из showPromt потерян;
 
 // Вариант сохранение контекста
 showDefferedPromt(ms) {
@@ -121,7 +119,6 @@ deferredHi() //выведет в консоль 'Hi, I'm Tom! - сработал
 const deferredHi = defer(user.sayHi.bind(user), 1000);
 deferredHi.call({ name: 'Bob' }); //выведет в консоль 'Hi, I'm Tom! -- не сработало
 //=>
-
 function defer(func, ms) {
     return function() {
         setTimeout(() => func.apply(this, arguments), ms); // setTimeout(() => func.call(this, ...arguments), ms)
