@@ -13,7 +13,7 @@ const func = user.getFullName();
 func(); //выведет 'undefined undefined' - ПОТЕРЯ КОНТЕКСТ - this не сработал!
 ______________________________________________________
 // метод .bind() - позволяет ;жестко привязать контекст this и дальше его поменять нельзя;
-onst user = {
+сonst user = {
     firstName: 'Bob',
     getFullName() {
         return (`${this.firstName}`);
