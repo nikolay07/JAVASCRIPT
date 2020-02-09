@@ -12,7 +12,8 @@ export const timer = {
         }, 5000);
     },
     getTime() {
-        return (`${this.minsPassed}:${this.secondsPassed.toFixed(2)}`);
+        if (`${this.secondsPassed}` < 10) { return `${this.minsPassed}:${"0" + this.secondsPassed}` }
+        return (`${this.minsPassed}:${this.secondsPassed}`);
     },
     stopTimer() {
         clearInterval(this.timerId);
