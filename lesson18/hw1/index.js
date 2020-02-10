@@ -6,3 +6,4 @@ export function spy() {
     getWrapper.calls = [];
     return getWrapper;
 };
+console.log(spy());
