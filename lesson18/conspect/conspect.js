@@ -44,9 +44,9 @@ const func = user.sayHi;
 func(); // underfined
 setTimeout(user.sayHi, 100); // window - вылет на глобальный объект
 setTimeout(() => user.sayHi(), 100); // {name: "Tom", sayHi: ƒ}
-//----------------------------------------------------
+________________________________________________________
 //This в callback
-'use strict'
+    'use strict'
 const event = {
     guests: [
         { name: 'Tom', email: 't@gmail.com', age: 17 },
