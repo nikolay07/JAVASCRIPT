@@ -1,3 +1,3 @@
 # JAVASCRIPT
 
-I did it!
+I can do it!
