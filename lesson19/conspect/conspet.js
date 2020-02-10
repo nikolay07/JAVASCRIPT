@@ -101,4 +101,4 @@ User.prototype.sayHi = function() { // экономим память prototype -
 }
 const user1 = new User('Tom', 17);
 const user2 = new User('Bob', 21);
-console.log(user2.sayHi === user1.sayHi); // true
+console.log(user2.sayHi === user1.sayHi); // true;
