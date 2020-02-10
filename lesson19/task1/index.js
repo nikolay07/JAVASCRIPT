@@ -18,6 +18,10 @@ export const ship = {
 Object.setPrototypeOf(ship, vehicle);
 ship.move();
 ship.stop();
+ship.startMachine();
+ship.stopMachine();
+
+
 /*
 Корабль - прототипы
  JAVASCRIPT  Урок 19. Прототипы. Наследование
