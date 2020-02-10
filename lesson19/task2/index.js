@@ -7,4 +7,4 @@ export function getOwnProps(obj) {
         }
     }
     return propArr;
-}
+};
