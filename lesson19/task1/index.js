@@ -18,10 +18,3 @@ export const ship = {
     },
 };
 Object.setPrototypeOf(ship, vehicle);
-
-
-
-/*
-Корабль - прототипы
-
-*/
