@@ -9,4 +9,4 @@ export default {
         this.firstName = firstName;
         this.lastName = lastName;
     },
-}
+};
