@@ -1,9 +1,10 @@
-export function spy(call) {
+export function spy(calls) {
+    getWrapper.call = [];
+
     function getWrapper(...args) {
-        getWrapper.calls.push(args);
+        getWrapper.call.push(args);
         return func.apply(this, args);
     }
-    getWrapper.calls = [];
+
     return getWrapper;
 };
-console.log(spy());
