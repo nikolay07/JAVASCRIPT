@@ -148,7 +148,7 @@ class Walllet {
         return this._balance -= amount;
     }
 }
-const wallet1 = new Wallet();
+const wallet1 = new Wallet1();
 console.log(wallet1.getBalance()); //0
 wallet1.deposit(45); // пополним кошелек на 45
 console.log(wallet1.getBalance()); //45
