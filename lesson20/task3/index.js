@@ -14,3 +14,11 @@ export class Wallet {
         this._balance -= amount;
     }
 }
+const wallet1 = new Wallet();
+console.log(wallet1.getBalance()); //0
+wallet1.deposit(50); // пополним кошелек на 50
+console.log(wallet1.getBalance()); //50
+wallet1.withdraw(20); //снимем деньги 20
+console.log(wallet1.getBalance()); //30
+wallet1.withdraw(150); //снимеме больше денег
+console.log(wallet1.getBalance()); //No enouhg funds
