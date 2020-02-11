@@ -12,7 +12,7 @@ export class User {
     requestNewPhoto() {
         console.log(`New photo request was sent for ${this.name}`);
     }
-    setAge() {
+    setAge(age) {
         if (age < 0) { return false; }
         this.age = age;
         if (age >= 25) { this.requestNewPhoto() }
