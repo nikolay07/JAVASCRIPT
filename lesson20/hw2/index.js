@@ -4,13 +4,13 @@ export class User {
         this._name = name;
         this._sessionId = sessionId;
     }
-    get forSaveId() { // геттер только чтение
+    get id() { // геттер только чтение
         return this._id;
     }
-    get forSaveName() { // геттер только чтение
+    get name() { // геттер только чтение
         return this._name;
     }
-    get forSavesessionId() { // геттер только чтение
+    get sessionId() { // геттер только чтение
         return this._sessionId;
     }
 }
@@ -19,8 +19,8 @@ export class UserRepository {
     constructor(users) {
         this._users = Object.freeze(users)
     }
-    get forUser() { // геттер только чтение
-        return this.user;
+    get users() { // геттер только чтение
+        return this._users;
     }
 
     getUserNames() {
