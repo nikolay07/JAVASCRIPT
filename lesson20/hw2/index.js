@@ -15,8 +15,8 @@ export class User {
     }
 }
 export class UserRepository extends User {
-    constructor() {
-        this.user = Object.freeze(user)
+    constructor(users) {
+        this.users = Object.freeze(users)
     }
     get forUser() { // геттер только чтение
         return this.user;
