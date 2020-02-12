@@ -29,10 +29,11 @@ export class UserRepository {
     getUserIds() {
         return this._users.map((a) => a.id); //получаем массив id пользователей
     }
-    getUserNameById(idUser) {
-        for (let key of idUser) {
-            if (key === this._users.id) return this._users.name;
-        } //получаем имя пользователя по id
+    getUserNameById(id) {
+        for (let i of this._users) { //получаем имя пользователя по id
+            if (i.id === this._users.id)
+                return i.name;
+        }
     }
 
 }
