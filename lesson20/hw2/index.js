@@ -37,34 +37,14 @@ export class UserRepository {
     }
 
 }
-const newUser = new User('133', 'Tom', '1234');
-const newUser1 = new User('133', 'Bob', '1224');
+const newUser = new User('133', 'Tom', '01134');
+const newUser1 = new User('257', 'Bob', '01724');
 console.log(newUser);
 console.log(newUser1);
-const newUs = new UserRepository([User]);
-console.log(newUs);
+const users1 = new UserRepository([{ id: 174, name: 'Bob' }, { id: 175, name: 'Tom' }, { id: 176, name: 'Ann' }])
+console.log(users1);
+
 /*
 User repository
 
-Создайте класс User и UserRepository - коллекцию пользователей
-Основные требования:
-1. Создать класс User c полями
-id - string
-name - string - имя пользователя
-sessionId - string
-2. Конструктор должен принимать параметры в том порядке, как они указаны выше. Также
-возможность модификации полей должна быть закрыта, но возможность их считывания нет
-(используйте ключевое слово get)
-3. Создать класс UserRepository c полями
-users - array[User] - массив объектов пользователей
-4. Поле инициализируется в конструкторе (входящим массивом. Возможность модификации
-поля из других классов должна быть закрыта, но возможность чтения открыта (используйте
-ключевое слово get). Чтобы запретить мутацию массива, используйте метод Object.freeze
-5. Создать методы ниже
-6. getUserNames() - для получения массива имен пользователей
-7. getUserIds() - - для получения массива айдишников пользователей
-8. getUserNameById() - для получения имени пользователя, по его id
-
-
-
-*/
+   */
