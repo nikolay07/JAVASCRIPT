@@ -24,10 +24,10 @@ export class UserRepository {
     }
 
     getUserNames() {
-        return this._name.filter((a) => a.name);
+        return this._name.map((a) => a.name);
     }
     getUserIds() {
-        return this._id.filter((a) => a.id);;
+        return this._id.map((a) => a.id);;
     }
     getUserNameById() {
         return this._sessionId
