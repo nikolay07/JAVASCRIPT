@@ -31,7 +31,7 @@ export class UserRepository {
     }
     getUserNameById(id) {
         for (let i of this._users) { //получаем имя пользователя по id
-            if (i.id === this._users.id)
+            if (i.id === id)
                 return i.name;
         }
     }
