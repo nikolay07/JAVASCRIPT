@@ -5,7 +5,7 @@ const tasks = [
     { text: 'Visit doctor', done: true },
     { text: 'Buy meat', done: true },
 ];
-const renderListItems = listItems => {
+const getListItems = listItems => {
     const listElem = document.querySelector('.list');
     const listItemElems = listItems.sort((a, b) => a.done - b.done)
         .map(({ text, done }) => {
@@ -24,4 +24,4 @@ const renderListItems = listItems => {
         });
     listElem.append(...listItemElems);
 };
-renderListItems(tasks);
+getListItems(tasks);
