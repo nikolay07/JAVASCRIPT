@@ -6,22 +6,22 @@ const tasks = [
     { text: 'Buy meat', done: true },
 ];
 const renderListItems = listItems => {
-    const listElem = document.querySelector('.list'); // получаем доступ к этому элементу
+    const listElem = document.querySelector('.list');
 
-    const listItemElems = listItems // превращаем массив в массив объектов c html элементами
-        .sort((a, b) => a.done - b.done) //сортируем чтоб выбранные дела были в конце
+    const listItemElems = listItems
+        .sort((a, b) => a.done - b.done)
         .map(({ text, done }) => {
-            const listItemElem = document.createElement('li'); // формируем элементы которые будем вставлять
-            listItemElem.classList.add('list__item'); // добавляем этому элементу класс
-            if (done) { //если дело выполнено добавляем класс на выбранный элемент
+            const listItemElem = document.createElement('li');
+            listItemElem.classList.add('list__item');
+            if (done) {
                 listItemElem.classList.add('list__item_done');
             }
-            const checkboxElem = document.createElement('input'); // создать чекбокс
-            checkboxElem.setAttribute('type', 'checkbox'); //устанавливаем checkbox атрибут type(чтом иожно поставить галочки);
-            checkboxElem.checked = done; //устанавливаем галочки выбранным  done: true;
-            checkboxElem.classList.add('list__item-checkbox'); // добавляем этому элементу класс
-            listItemElem.append(checkboxElem, text); // добавляем этому элементу чекбокс и текст
-            return listItemElem; // получим массив элементов списка, готовых к вставке на страницу
+            const checkboxElem = document.createElement('input');
+            checkboxElem.setAttribute('type', 'checkbox');
+            checkboxElem.checked = done;
+            checkboxElem.classList.add('list__item-checkbox');
+            listItemElem.append(checkboxElem, text);
+            return listItemElem;
 
         });
     listElem.append(...listItemElems);
