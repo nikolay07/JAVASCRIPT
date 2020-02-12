@@ -1,7 +1,40 @@
 export class User {
+    constructor(id, name, sessionId) {
+        this.id = id;
+        this.name = name;
+        this.sessionId = sessionId;
+    }
+    get forSaveId() { // геттер только чтение
+        return this.id;
+    }
+    get forSaveName() { // геттер только чтение
+        return this.name;
+    }
+    get forSavesessionId() { // геттер только чтение
+        return this.sessionId;
+    }
+}
+export class UserRepository extends User {
+    constructor() {
+        this.user = Object.freeze(user)
+    }
+    get forUser() { // геттер только чтение
+        return this.user;
+    }
+
+    getUserNames() {
+        return this.name;
+    }
+    getUserIds() {
+        return this.id;
+    }
+    getUserNameById() {
+        return this.sessionId
+    }
 
 }
-
+const newUser = new User('133', 'Tom', '1234');
+console.log(newUser);
 
 /*
 User repository
