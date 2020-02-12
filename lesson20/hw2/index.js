@@ -1,41 +1,45 @@
 export class User {
     constructor(id, name, sessionId) {
-        this.id = id;
-        this.name = name;
-        this.sessionId = sessionId;
+        this._id = id;
+        this._name = name;
+        this._sessionId = sessionId;
     }
     get forSaveId() { // геттер только чтение
-        return this.id;
+        return this._id;
     }
     get forSaveName() { // геттер только чтение
-        return this.name;
+        return this._name;
     }
     get forSavesessionId() { // геттер только чтение
-        return this.sessionId;
+        return this._sessionId;
     }
 }
-export class UserRepository extends User {
+
+export class UserRepository {
     constructor(users) {
-        this.users = Object.freeze(users)
+        this._users = Object.freeze(users)
     }
     get forUser() { // геттер только чтение
         return this.user;
     }
 
     getUserNames() {
-        return this.name;
+        return this._name;
     }
     getUserIds() {
-        return this.id;
+        return this._id;
     }
     getUserNameById() {
-        return this.sessionId
+        return this._sessionId
     }
 
 }
 const newUser = new User('133', 'Tom', '1234');
+const newUser1 = new User('133', 'Bob', '1224');
 console.log(newUser);
-
+console.log(newUser1);
+const newUs = new UserRepository([User]);
+console.log(newUs);
 /*
 User repository
 
