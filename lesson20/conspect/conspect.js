@@ -1,4 +1,4 @@
-//Классы в JavaScript 
+//Классы в JavaScript.
 
 function User(name, age) {
     this.name = name;
