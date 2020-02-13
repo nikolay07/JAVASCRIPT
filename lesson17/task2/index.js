@@ -1,3 +1,4 @@
+/*Привязка контекста. Создать объект, который будет запрашивать у пользователя номер телефона для обратного звонка*/
 export const callbackPrompt = {
     message: 'Tell me your number',
     showPrompt() {
