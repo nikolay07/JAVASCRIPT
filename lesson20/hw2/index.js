@@ -1,3 +1,4 @@
+/*Коллекция пользователей - User repository*/
 export class User {
     constructor(id, name, sessionId) {
         this._id = id;
@@ -43,8 +44,3 @@ console.log(newUser);
 console.log(newUser1);
 const users1 = new UserRepository([{ id: 174, name: 'Bob' }, { id: 175, name: 'Tom' }, { id: 176, name: 'Ann' }])
 console.log(users1);
-
-/*
-User repository
-
-   */
