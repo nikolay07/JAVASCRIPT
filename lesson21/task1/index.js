@@ -1,4 +1,4 @@
-/*Список дел - добавление, изменение дел - part 1*/
+/*Todo List/ Список дел - добавление, изменение дел - part 1*/
 const tasks = [
     { text: 'Buy milk', done: false },
     { text: 'Pick up Tom from airport', done: false },
