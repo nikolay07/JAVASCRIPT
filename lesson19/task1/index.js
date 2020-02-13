@@ -1,3 +1,4 @@
+/*Корабль - прототипы. Наследование поведения передвижения.*/
 export const vehicle = {
     move() {
         console.log(`${this.name} is moving`);
