@@ -1,3 +1,4 @@
+/*Конструктор объектов. Создание пользователей с определенными возможностями.*/
 export class User {
     constructor(name, age) {
         this.name = name;
@@ -25,7 +26,3 @@ const user2 = new User('Tom', 19);
 console.log(user1); //User {name: "Bob", age: 25}
 console.log(user2); //User {name: "Tom", age: 19}
 console.log(User.createEmpty()); //User {name: '', age: null}
-
-/*Конструктор объектов
-
- */
