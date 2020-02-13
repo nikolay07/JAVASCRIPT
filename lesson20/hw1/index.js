@@ -1,3 +1,4 @@
+/*Order класс - ресурс для сделок по недвижимости*/
 export class Order {
     constructor(price, city, type) {
         this.price = price;
@@ -25,8 +26,3 @@ export class Order {
 }
 const newBuy = new Order(200000, 'Kyiv', 'Buy');
 console.log(newBuy);
-
-
-/*Order класс
-
- */
