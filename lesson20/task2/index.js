@@ -1,4 +1,4 @@
-/*Корабль. Наследование поведения передвижения.*/
+/*Корабль. Наследование поведения передвижения*/
 export class Vehicle {
     constructor(name, numberOfWheels) {
         this.name = name;
