@@ -1,4 +1,4 @@
-/*Коллекция пользователей - User repository*/
+/*User repository. Коллекция пользователей.*/
 export class User {
     constructor(id, name, sessionId) {
         this._id = id;
