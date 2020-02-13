@@ -1,4 +1,4 @@
-/*Order класс - ресурс для сделок по недвижимости*/
+/*Order класс. Ресурс для сделок по недвижимости*/
 export class Order {
     constructor(price, city, type) {
         this.price = price;
