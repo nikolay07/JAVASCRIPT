@@ -1,22 +1,22 @@
-//DOM
-// В консоле на сайте выбрать стрелкой элемент на сайте, и потом  консоле нажать $0 - выведет этот элемент.
-// При добавлении к $.parntNode => $.parntNode.parntNode = > $.parntNode.parntNode.parntNode - выврдит родительскиие элементы вплоть до #document
-//window.innerWidth - покажет ширину окна браузера
-//window.innerHeight - покажет высоту окна браузера
-//$.clientWidth - покажет ширину последнего выбраного элемента в окне
-//$.clientHeight - покажет ширину последнего выбраного элемента в окне
-//document.querySelector('.class') - выведет первый элемент с таким классом
-//document.querySelectorAll('.class') - выведет колекцию элементов с таким классом. Это не массив, а псевдомассив. Но его можно превратить в массив - (...document.querySelectorAll('.class')) или Array.from(document.querySelectorAll('.class')).
-//document.queryById('.class') - возвращает один элемент
-//document.queryByName - редко
-//document.queryByTagName - редко
-//document.queryByClassName - редко
-//elem.closest('.class') - ищет ближайший элемент
-//elem.mathes('ul > li.selected')
-//elem.contains(elem)
-//$.innerHTML - строковое представление внутренннего HTML выбранного элемента
-//$.outerHTML - строковое представление внутренннего HTML выбранного элемента + сам выбранный элемент
-
+/*DOM
+В консоле на сайте выбрать стрелкой элемент на сайте, и потом  консоле нажать $0 - выведет этот элемент.
+При добавлении к $.parntNode => $.parntNode.parntNode = > $.parntNode.parntNode.parntNode - выврдит родительскиие элементы вплоть до #document
+window.innerWidth - покажет ширину окна браузера
+window.innerHeight - покажет высоту окна браузера
+$.clientWidth - покажет ширину последнего выбраного элемента в окне
+$.clientHeight - покажет ширину последнего выбраного элемента в окне
+document.querySelector('.class') - выведет первый элемент с таким классом
+document.querySelectorAll('.class') - выведет колекцию элементов с таким классом. Это не массив, а псевдомассив. Но его можно превратить в массив - (...document.querySelectorAll('.class')) или Array.from(document.querySelectorAll('.class')).
+document.queryById('.class') - возвращает один элемент
+document.queryByName - редко
+document.queryByTagName - редко
+document.queryByClassName - редко
+elem.closest('.class') - ищет ближайший элемент
+elem.mathes('ul > li.selected')
+elem.contains(elem)
+$.innerHTML - строковое представление внутренннего HTML выбранного элемента
+$.outerHTML - строковое представление внутренннего HTML выбранного элемента + сам выбранный элемент
+*/
 
 //TO DO LIST
 const tasks = [
