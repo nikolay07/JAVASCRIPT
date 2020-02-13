@@ -1,3 +1,4 @@
+/*Класс пользователя. Создать класс пользователя*/
 export default {
     firstName: 'John',
     lastName: 'Doe',
