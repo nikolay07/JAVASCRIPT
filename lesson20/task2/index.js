@@ -1,3 +1,4 @@
+/*Корабль. Наследование поведения передвижения.*/
 export class Vehicle {
     constructor(name, numberOfWheels) {
         this.name = name;
@@ -28,8 +29,3 @@ export class Ship extends Vehicle {
 const ship1 = new Ship('Aurora', 17);
 console.log(ship1); //Ship {name: "Aurora", hasWhells: false, speed: 17}
 ship1.stop(); //Aurora stopped1 Aurora lifting anchor up
-/*
-Корабль
-
-
-*/
