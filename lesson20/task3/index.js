@@ -1,3 +1,5 @@
+/*Защищенные поля. Кошелек с возможностью пополнения и снятия средств*/
+
 export class Wallet {
     constructor() {
         this._balance = 0;
