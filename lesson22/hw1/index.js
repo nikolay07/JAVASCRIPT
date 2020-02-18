@@ -1,22 +1,18 @@
-/*Список дел - добавление, изменение дел - part 1. Добавить возможность создавать дела и отмечать как выполненые / не выполненные*/
-
-//Список задач по умолчанию
+/*Todo List/ Список дел - добавление, изменение дел - part 1*/
 const tasks = [
-    { text: 'Buy milk', done: false, date: Date.now(), },
-    { text: 'Pick up Tom from airport', done: false, date: Date.now() + 0.1, },
-    { text: 'Visit party', done: false, date: Date.now() + 0.2, },
-    { text: 'Visit doctor', done: true, date: Date.now() + 0.3, },
-    { text: 'Buy meat', done: true, date: Date.now() + 0.4, },
+    { text: 'Buy milk', done: false, date: new Date },
+    { text: 'Pick up Tom from airport', done: false, date: new Date },
+    { text: 'Visit party', done: false, date: new Date },
+    { text: 'Visit doctor', done: true, date: new Date },
+    { text: 'Buy meat', done: true, date: new Date },
 ];
-
-//Создать новую задачу
 const createNewTask = () => {
     const task = document.querySelector('.task-input');
     if (task.value == '') return;
     const newTask = {
         text: task.value,
         done: false,
-        date: Date.now(),
+        date: new Date,
     }
     tasks.push(newTask);
     getListItems(tasks);
@@ -25,12 +21,11 @@ const createNewTask = () => {
 const createTaskButton = document.querySelector('.create-task-btn');
 createTaskButton.addEventListener('click', createNewTask);
 
-//Сортируем, очищаем, обновляем список задач
+
 const getListItems = listItems => {
     const listElem = document.querySelector('.list');
     listElem.innerHTML = '';
-
-    const listItemsElems = listItems
+    const listItemElems = listItems
         .sort((a, b) => b.date - a.date)
         .sort((a, b) => a.done - b.done)
         .map(({ text, done, date }) => {
@@ -41,21 +36,20 @@ const getListItems = listItems => {
             }
             const cheboxElem = document.createElement('input');
             cheboxElem.setAttribute('type', 'checkbox');
-            cheboxElem.setAttribute('id', date)
             cheboxElem.classList.add('list__item-checkbox');
             cheboxElem.checked = done;
-            cheboxElem.addEventListener('click', getChecked);
             listItemElem.append(cheboxElem, text);
+            cheboxElem.setAttribute('id', date)
+
+            function getChecked() {
+                const id = this.id;
+                const idByTask = tasks.find(a => a.date == id);
+                idByTask.done = this.checked;
+                getListItems(tasks);
+            }
+            cheboxElem.addEventListener('click', getChecked);
             return listItemElem;
         });
-    return listElem.append(...listItemsElems);
-}
-
-function getChecked() {
-    let id = this.id;
-    let idTask = tasks.find(a => a.date == id);
-    idTask.done = this.checked;
-    getListItems(tasks);
-}
-
+    listElem.append(...listItemElems);
+};
 getListItems(tasks);
