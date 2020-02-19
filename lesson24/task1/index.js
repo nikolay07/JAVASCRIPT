@@ -1,4 +1,4 @@
-//Установка компонентов даты
+// Установка компонентов даты
 const weekDays = ['Su', 'Mo', 'Tu', 'We', 'Fr', 'St']
 const dayOfWeek = (date, days) => {
     const day = new Date(date).getDate();
