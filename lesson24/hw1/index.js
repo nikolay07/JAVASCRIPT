@@ -7,7 +7,7 @@ const getDiff = (startDate, endDate) => {
     const hoursInMs = minInMs * 60;
     const daysInMs = hoursInMs * 24;
 
-    const differInMs = Date.parse(endDate) - Date.parse(startDate);
+    const differInMs = Math.abs(Date.parse(startDate) - Date.parse(endDate));
 
     const days = Math.trunc(differInMs / daysInMs);
     const daysIntegerInMs = days * daysInMs;
