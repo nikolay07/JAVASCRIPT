@@ -2,7 +2,7 @@
 const date1 = new Date('May 17, 1995 03:24:00');
 const date2 = new Date('December 27, 1996 09:25:00');
 
-const getDiff = (startDate, endDate) => {
+export const getDiff = (startDate, endDate) => {
     const minInMs = 60 * 1000;
     const hoursInMs = minInMs * 60;
     const daysInMs = hoursInMs * 24;
