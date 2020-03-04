@@ -1,4 +1,4 @@
-const tasks = [
+export const tasks = [
     { text: 'Buy milk', done: false, dateStart: new Date(2020, 01, 15), dateEnd: undefined, id: 4 },
     { text: 'Pick up Tom from airport', done: false, dateStart: new Date(2020, 01, 14), dateEnd: undefined, id: 3 },
     { text: 'Visit party', done: false, dateStart: new Date(2020, 01, 13), dateEnd: undefined, id: 2 },
@@ -25,7 +25,7 @@ createTaskButton.addEventListener('click', createNewTask);
 
 const listElem = document.querySelector('.list');
 
-function renderListItems(tasks) {
+export function renderListItems(tasks) {
     listElem.innerHTML = '';
     const listItemElems = tasks
         .sort((a, b) => b.dateStart - a.dateStart)
