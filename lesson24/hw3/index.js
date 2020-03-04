@@ -19,7 +19,6 @@ function createNewTask() {
     renderListItems(tasks);
     task.value = '';
 };
-
 const task = document.querySelector('.task-input');
 const createTaskButton = document.querySelector('.create-task-btn');
 createTaskButton.addEventListener('click', createNewTask);
