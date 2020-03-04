@@ -8,14 +8,17 @@ const students = [
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
     'Oct', 'Nov', 'Dec'
 ];
+
 export const studentsBirthDays = students => {
-    let groupByBirthMonth = students
-        .sort((a, b) => { new Date(b.birthDate).getDate() - new Date(a.birthDate).getDate() })
-        .reduce((acc, { name, birthDate }) => {
-            const birthMonth = months[new Date(birthDate).getMonth()];
-            return {...acc, [birthMonth]: acc[birthMonth] ? acc[birthMonth].concat(name) : [name] };
-        }, {});
-    return groupByBirthMonth;
-};
+    let studentByBirthMonth = {};
+    [...students].sort((a, b) => new Date(a.birthDate) - new Date(b.birthDate))
+        .map(elem => {
+            if (studentByBirthMonth[months[new Date(elem.birthDate).getMonth()]] === undefined) {
+                studentByBirthMonth[months[new Date(elem.birthDate).getMonth()]] = [];
+            }
+            studentByBirthMonth[months[new Date(elem.birthDate).getMonth()]].push(elem.name)
+        });
+    return studentByBirthMonth;
+}
 console.log(studentsBirthDays(students));
 console.log(students);
