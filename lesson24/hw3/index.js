@@ -1,9 +1,9 @@
 const tasks = [
-    { text: 'Buy milk', done: false, dateStart: new Date(2020, 01, 15), dateEnd: undefined, id: 4 },
-    { text: 'Pick up Tom from airport', done: false, dateStart: new Date(2020, 01, 14), dateEnd: undefined, id: 3 },
-    { text: 'Visit party', done: false, dateStart: new Date(2020, 01, 13), dateEnd: undefined, id: 2 },
-    { text: 'Visit doctor', done: true, dateStart: new Date(2020, 01, 12), dateEnd: undefined, id: 1 },
-    { text: 'Buy meat', done: true, dateStart: new Date(2020, 01, 11), dateEnd: undefined, id: 0 },
+    { text: 'Buy milk', done: false, dateStart: new Date(2020, 1, 15), dateEnd: undefined, id: 4 },
+    { text: 'Pick up Tom from airport', done: false, dateStart: new Date(2020, 1, 14), dateEnd: undefined, id: 3 },
+    { text: 'Visit party', done: false, dateStart: new Date(2020, 1, 13), dateEnd: undefined, id: 2 },
+    { text: 'Visit doctor', done: true, dateStart: new Date(2020, 1, 12), dateEnd: undefined, id: 1 },
+    { text: 'Buy meat', done: true, dateStart: new Date(2020, 1, 11), dateEnd: undefined, id: 0 },
 ];
 
 function createNewTask() {
