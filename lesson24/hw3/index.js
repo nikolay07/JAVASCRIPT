@@ -2,8 +2,8 @@ let tasks = [
     { text: 'Buy milk', done: false, dateStart: new Date(2020, 1, 15), dateEnd: undefined, id: 5 },
     { text: 'Pick up Tom from airport', done: false, dateStart: new Date(2020, 1, 14), dateEnd: undefined, id: 4 },
     { text: 'Visit party', done: false, dateStart: new Date(2020, 1, 13), dateEnd: undefined, id: 3 },
-    { text: 'Visit doctor', done: true, dateStart: new Date(2020, 1, 12), dateEnd: undefined, id: 2 },
-    { text: 'Buy meat', done: true, dateStart: new Date(2020, 1, 11), dateEnd: undefined, id: 1 },
+    { text: 'Visit doctor', done: true, dateStart: new Date(2020, 1, 12), dateEnd: new Date(2020, 1, 12), id: 2 },
+    { text: 'Buy meat', done: true, dateStart: new Date(2020, 1, 11), dateEnd: new Date(2020, 1, 11), id: 1 },
 ];
 
 function createNewTask() {
@@ -25,9 +25,9 @@ createTaskButton.addEventListener('click', createNewTask);
 
 const listElem = document.querySelector('.list');
 
-function renderListItems(tasks) {
+function renderListItems(allTask) {
     listElem.innerHTML = '';
-    const listItemElems = tasks
+    const listItemElems = allTask
         .sort((a, b) => b.dateStart - a.dateStart)
         .sort((a, b) => a.done - b.done)
         .sort((a, b) => b.dateEnd - a.dateEnd)
