@@ -28,9 +28,15 @@ const listElem = document.querySelector('.list');
 function renderListItems(allTask) {
     listElem.innerHTML = '';
     const listItemElems = allTask
-        .sort((a, b) => b.dateStart - a.dateStart)
-        .sort((a, b) => a.done - b.done)
-        .sort((a, b) => b.dateEnd - a.dateEnd)
+        .sort((a, b) => {
+            if (a.done - b.done !== 0) {
+                return a.done - b.done;
+            }
+            if (a.done) {
+                return new Date(b.dateEnd) - new Date(a.dateEnd);
+            }
+            return new Date(b.dateStart) - new Date(a.dateStart);
+        })
         .map(({ text, done, id }) => {
             const listItemElem = document.createElement('li');
             listItemElem.classList.add('list__item');
