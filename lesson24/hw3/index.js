@@ -28,8 +28,8 @@ const listElem = document.querySelector('.list');
 function renderListItems(tasks) {
     listElem.innerHTML = '';
     const listItemElems = tasks
-        .sort((a, b) => a.done - b.done)
         .sort((a, b) => b.dateStart - a.dateStart)
+        .sort((a, b) => a.done - b.done)
         .sort((a, b) => b.dateEnd - a.dateEnd)
         .map(({ text, done, id }) => {
             const listItemElem = document.createElement('li');
