@@ -1,4 +1,4 @@
-export default function setTitle(text) {
+export function setTitle(text) {
     return document.querySelector('.title').innerText = text;
 }
 setTitle('Hello!!!');
