@@ -6,7 +6,7 @@ export default () => {
     }
     getTitleElement();
 
-    export function getInputElement() {
+    function getInputElement() {
         let inputElem = document.querySelector('input[type = "text"]');
         console.dir(inputElem);
         return inputElem;
