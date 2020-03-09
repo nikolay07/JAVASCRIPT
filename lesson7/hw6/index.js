@@ -1,1 +1,1 @@
-const sum = (arr) => { return !Array.isArray(arr) ? null : arr.reduce(acc, elem => acc + elem); }
+const sum = arr => !Array.isArray(arr) ? null : arr.reduce((acc, elem) => acc + elem);
