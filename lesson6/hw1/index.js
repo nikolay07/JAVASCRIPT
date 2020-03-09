@@ -1,4 +1,1 @@
-function createEmptyArray(len) {
-    let len = [];
-    return len;
-};
+const createEmptyArray = (len) => Array(len);
