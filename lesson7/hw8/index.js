@@ -1,1 +1,1 @@
-const arrAverage = arr => arr.reduce((acc, elem) => acc + elem) / arr.length;
+const arrAverage = arr => !Array.isArray(arr) ? null : arr.reduce((acc, elem) => acc + elem) / arr.length;
