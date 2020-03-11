@@ -1,4 +1,4 @@
-export const getSubArray = (arr, n) => {
+const getSubArray = (arr, n) => {
     let newArr = [];
     arr.length = n;
     for (let i = 0; i < arr.length; i++) {
