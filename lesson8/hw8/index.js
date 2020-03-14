@@ -1,6 +1,6 @@
 // let keysList = ['name', 'address', 'age'];
 // let valuesList = ['Bob', 'Ukraine', 34];
-buildObject = (keysList, valuesList) => {
+const buildObject = (keysList, valuesList) => {
     // let obj = keysList.reduce((acum, elem, index) => ({
     //     ...acum,
     //     [elem]: index
