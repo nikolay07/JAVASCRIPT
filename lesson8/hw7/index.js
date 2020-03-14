@@ -2,11 +2,11 @@
 // let object2 = { name: 'Nik', age: 34 };
 // let object3 = { name: 'Nik', age: 35 };
 
-const compareObject = (a, b) => {
-    let obj1 = Object.entries(a).reduce((acum, elem) => acum.concat(elem));
-    let obj2 = Object.entries(b).reduce((acum, elem) => acum.concat(elem));
-    return obj1.every((elem, index) => elem === obj2[index]);
+const compareObjects = (obj1, obj2) => {
+    let elem1 = Object.entries(obj1).reduce((acum, elem) => acum.concat(elem));
+    let elem2 = Object.entries(obj2).reduce((acum, elem) => acum.concat(elem));
+    return elem1.every((elem, index) => elem === elem2[index]);
 
 }
 
-// console.log(compareObject(object1, object2));
+// console.log(compareObjects(object1, object2));
