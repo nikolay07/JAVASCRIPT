@@ -1,9 +1,9 @@
-let page = document.querySelector('.pagination');
+const page = document.querySelector('.pagination');
 const handleClick = (event) => {
-        const paginationPage = event.target.closest('.pagination__page');
-        if (!paginationPage) {
-            return;
-        }
-        console.log(paginationPage.dataset.pageNumber);
+    const paginationPage = event.target.closest('.pagination__page');
+    if (!paginationPage) {
+        return;
     }
-    //page.addEventListener('click', handleClick);
+    console.log(paginationPage.dataset.pageNumber);
+}
+page.addEventListener('click', handleClick);
