@@ -4,11 +4,11 @@ const dayTransactions = [
     { currency: 'EUR', amount: 90, operation: 'sell' },
 ];
 
-function getTotalBalance(transactionsList) {
+const getTotalBalance = transactionsList => {
     const transactions = transactionsList.reduce((acc, curr) => {
         const { currency, operation, amount } = curr;
         acc[currency] = acc[currency] || 0;
-        if (operation === 'buy') { acc[currency] += amount } else { acc[currency] -= amount }
+        operation === 'buy' ? acc[currency] += amount : acc[currency] -= amount
         return acc;
     }, {});
     return transactions;
