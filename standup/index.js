@@ -15,5 +15,5 @@ export function getTotalBalance(transactionsList) {
     }, {});
     return result;
 }
-getTotalBalance(dayTransactions)
-    //console.log(getTotalBalance(dayTransactions));
+//getTotalBalance(dayTransactions);
+//console.log(getTotalBalance(dayTransactions));
