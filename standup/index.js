@@ -5,7 +5,7 @@ const dayTransactions = [
 ];
 
 export function getTotalBalance(transactionsList) {
-    const result = transactionsList.reduce((acc, curr) => {
+    const transactions = transactionsList.reduce((acc, curr) => {
         let currency = curr.currency;
         let operation = curr.operation;
         let amount = curr.amount;
@@ -13,7 +13,7 @@ export function getTotalBalance(transactionsList) {
         if (operation === 'buy') { acc[currency] += amount } else { acc[currency] -= amount }
         return acc;
     }, {});
-    return result;
-}
-//getTotalBalance(dayTransactions);
+    return transactions;
+};
+const result = getTotalBalance(dayTransactions);
 //console.log(getTotalBalance(dayTransactions));
