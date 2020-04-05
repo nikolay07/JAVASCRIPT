@@ -47,8 +47,7 @@ function getPopulation(population) {
 // 'Population in Ukraine is 43000'
 // используйте объект country
 // ... your code here
-getPopulation.apply(country, ['43000']);
-
+console.log(getPopulation.apply(country, [43000]););
 
 /* ===> 4 <=== */
 const transaction = {
