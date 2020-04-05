@@ -1,5 +1,7 @@
 import { setItem, getItem } from './storage.js'
-export const sortTask = () => {
+
+export const listElem = document.querySelector('.list');
+export function sortTask() {
     const tasksList = getItem('tasksList') || [];
     const sortedTask = tasksList.sort((a, b) => a.done - b.done);
     const sortTask = [];
@@ -9,7 +11,6 @@ export const sortTask = () => {
     setItem('tasksList', sortTask);
     return sortTask;
 }
-export const listElem = document.querySelector('.list');
 export const renderListItems = () => {
     const tasksList = getItem('tasksList') || [];
     const listTasks = sortTask(tasksList);

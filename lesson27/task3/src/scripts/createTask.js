@@ -5,7 +5,7 @@ const btnCreateTask = document.querySelector('.create-task-btn');
 let task = document.querySelector('.task-input')
 btnCreateTask.addEventListener('click', createNewTask);
 
-export const createNewTask = () => {
+export function createNewTask() {
     if (task.value == '') return;
     const tasksList = getItem('tasksList') || [];
     tasksList.push({
