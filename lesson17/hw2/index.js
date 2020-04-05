@@ -47,7 +47,7 @@ function getPopulation(population) {
 // 'Population in Ukraine is 43000'
 // используйте объект country
 // ... your code here
-
+getPopulation.apply(country, ['43000']);
 
 
 /* ===> 4 <=== */
@@ -67,6 +67,7 @@ const anotherTransaction = {
     currency: 'USD',
     exchange: 'NASDAQ',
 };
+transaction.printTransaction.apply(anotherTransaction);
 
 // вызовите метод transaction.printTransaction так, чтобы в консоль вывелось
 // '400 USD - buy on NASDAQ'
