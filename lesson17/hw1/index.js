@@ -35,7 +35,7 @@ greeting.call(company, 'Bob', 'Marley')
 /* ===> 3 <=== */
 const country = {
     countryName: 'Ukraine',
-    capital: 'Kyiv',
+    capital: 'Kyiv'
 };
 
 function getPopulation(population) {
@@ -46,7 +46,7 @@ function getPopulation(population) {
 // 'Population in Ukraine is 43000'
 // используйте объект country
 // ... your code here
-getPopulation.call(country, '43000');
+getPopulation.call(country, 43000);
 
 /* ===> 4 <=== */
 const transaction = {
