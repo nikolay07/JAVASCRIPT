@@ -34,7 +34,7 @@ let b = 7;
  * и должна принимать 2 числа и возвращать из произведение
  */
 // ...your code here
-const multiplier = calculator.bind(multiply, a, b);
+export const multiplier = calculator.bind(multiply, a, b);
 multiplier();
 /*
  * Ф-ция summator должна быть создана на основе calculator
@@ -42,7 +42,7 @@ multiplier();
  * и должна принимать 2 числа и возвращать из сумму
  */
 // ...your code here
-const summator = calculator.bind(add, a, b);
+export const summator = calculator.bind(add, a, b);
 summator();
 /*
  * Ф-ция twice должна быть создана на основе calculator
@@ -50,5 +50,5 @@ summator();
  * и должна принимать 1 число и возвращать это число умноженное на 2
  */
 // ...your code here
-const twice = calculator.bind(multiply, a, 2);
+export const twice = calculator.bind(multiply, a, 2);
 twice();
