@@ -13,7 +13,7 @@ const sayStudentName = sayName.bind(student);
 
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя 'Bruce' (используйте другой объект)
 // ... your code here
-let sayBruceName = sayName.bind({ name: 'Bruce' });
+const sayBruceName = sayName.bind({ name: 'Bruce' });
 
 
 /* ===> 2 <=== */
@@ -29,7 +29,7 @@ function greeting(firstName, lastName) {
 // 'Hello, Bob Marley. Welcome to the Microsoft'
 // используйте объект company
 // ... your code here
-sayBruceName = greeting.bind(company, 'Bob', 'Marley');
+const sayBobName = greeting.bind(company, 'Bob', 'Marley');
 
 /* ===> 3 <=== */
 const country = {
@@ -77,6 +77,7 @@ const printSpecialTransaction = transaction.printTransaction.bind(anotherTransac
 export {
     sayStudentName,
     sayBruceName,
+    sayBobName,
     getUkrainePopulation,
     printSpecialTransaction,
 
