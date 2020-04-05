@@ -42,8 +42,8 @@ multiplier();
  * и должна принимать 2 числа и возвращать из сумму
  */
 // ...your code here
-export const summator = calculator.bind(add, a, b);
-summator();
+export const summator = calculator.bind(add);
+summator(a, b);
 /*
  * Ф-ция twice должна быть создана на основе calculator
  * с использования .bind
