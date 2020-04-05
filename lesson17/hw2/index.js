@@ -9,12 +9,14 @@ export function sayName() {
 
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя студента 
 // ... your code here
-
+sayName.apply(student)
 
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя 'Bruce' (используйте другой объект)
 // ... your code here
-
-
+const student2 = {
+    name: 'Bruce',
+};
+sayName.apply(student2);
 
 /* ===> 2 <=== */
 const company = {
@@ -29,7 +31,7 @@ function greeting(firstName, lastName) {
 // 'Hello, Bob Marley. Welcome to the Microsoft'
 // используйте объект company
 // ... your code here
-
+greeting.apply(company, ['Bob', 'Marley'])
 
 /* ===> 3 <=== */
 const country = {

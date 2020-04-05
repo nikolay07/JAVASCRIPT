@@ -35,7 +35,7 @@ greeting.call(company, 'Bob', 'Marley')
 /* ===> 3 <=== */
 const country = {
     countryName: 'Ukraine',
-    capital: 'Kyiv'
+    capital: 'Kyiv',
 };
 
 function getPopulation(population) {
