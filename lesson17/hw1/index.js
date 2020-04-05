@@ -9,12 +9,13 @@ export function sayName() {
 
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя студента 
 // ... your code here
-
-
+sayName.call(student);
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя 'Bruce' (используйте другой объект)
 // ... your code here
-
-
+const student2 = {
+    name: 'Bruce',
+};
+sayName.call(student2);
 
 /* ===> 2 <=== */
 const company = {
@@ -29,7 +30,7 @@ function greeting(firstName, lastName) {
 // 'Hello, Bob Marley. Welcome to the Microsoft'
 // используйте объект company
 // ... your code here
-
+greeting.call(company, 'Bob', 'Marley')
 
 /* ===> 3 <=== */
 const country = {
@@ -45,8 +46,7 @@ function getPopulation(population) {
 // 'Population in Ukraine is 43000'
 // используйте объект country
 // ... your code here
-
-
+getPopulation.call(country, 43000);
 
 /* ===> 4 <=== */
 const transaction = {
@@ -70,3 +70,4 @@ const anotherTransaction = {
 // '400 USD - buy on NASDAQ'
 // используйте объект anotherTransaction как контекст
 // ... your code here
+transaction.printTransaction.call(anotherTransaction);
