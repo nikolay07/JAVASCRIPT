@@ -50,5 +50,5 @@ summator(a, b);
  * и должна принимать 1 число и возвращать это число умноженное на 2
  */
 // ...your code here
-export const twice = calculator.bind(multiply);
-twice(a, 2);
+export const twice = calculator.bind(multiply, 2);
+twice(a);
