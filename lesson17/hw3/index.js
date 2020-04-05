@@ -12,7 +12,6 @@ export function sayName() {
 const sayStudentName = sayName.bind(student);
 sayStudentName();
 
-
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя 'Bruce' (используйте другой объект)
 // ... your code here
 const student2 = {
@@ -35,8 +34,9 @@ function greeting(firstName, lastName) {
 // 'Hello, Bob Marley. Welcome to the Microsoft'
 // используйте объект company
 // ... your code here
-const sayBobName = greeting.bind(company, 'Bob', 'Marley');
-sayBobName();
+const sayBobName = greeting.bind(company);
+sayBobName('Bob', 'Marley');
+
 /* ===> 3 <=== */
 const country = {
     countryName: 'Ukraine',
@@ -44,10 +44,11 @@ const country = {
 };
 
 function getPopulation(population) {
+    //console.log(`Population in ${this.countryName} is ${population}`);
     return `Population in ${this.countryName} is ${population}`;
 }
-const getUkrainePopulation = getPopulation.bind(country, '43000');
-getUkrainePopulation();
+const getUkrainePopulation = getPopulation.bind(country);
+getUkrainePopulation('43000');
 // вызовите ф-цию getPopulation так, чтобы она вернула 
 // 'Population in Ukraine is 43000'
 // используйте объект country
