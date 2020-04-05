@@ -13,7 +13,7 @@ export const sayStudentName = sayName.bind(student);
 
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя 'Bruce' (используйте другой объект)
 // ... your code here
-export const sayBruceName = sayName.bind({ name: 'Bruce' });
+export let sayBruceName = sayName.bind({ name: 'Bruce' });
 
 
 /* ===> 2 <=== */
@@ -29,7 +29,7 @@ function greeting(firstName, lastName) {
 // 'Hello, Bob Marley. Welcome to the Microsoft'
 // используйте объект company
 // ... your code here
-export const sayBobName = greeting.bind(company, 'Bob', 'Marley');
+export let sayBruceName = greeting.bind(company, 'Bob', 'Marley');
 
 /* ===> 3 <=== */
 const country = {
