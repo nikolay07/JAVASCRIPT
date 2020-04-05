@@ -12,6 +12,7 @@ export function sayName() {
 const sayStudentName = sayName.bind(student);
 sayStudentName();
 
+
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя 'Bruce' (используйте другой объект)
 // ... your code here
 const student2 = {
