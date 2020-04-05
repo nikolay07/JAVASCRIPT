@@ -42,7 +42,7 @@ multiplier();
  * и должна принимать 2 числа и возвращать из сумму
  */
 // ...your code here
-export const summator = calculator.bind(add, a, b);
+export const summator = calculator.bind(add, 3, 7);
 summator();
 /*
  * Ф-ция twice должна быть создана на основе calculator
