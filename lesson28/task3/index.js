@@ -1,5 +1,7 @@
-//const sum = (a, b) => a + b;
-const sum = a => b => a + b;
-const add3 = sum(3);
-const result = add3(5);
-console.log(result);
+//Каррирование
+const mult = a => b => a * b;
+const twice = mult(2);
+const triple = mult(3)
+console.log(twice(5));
+console.log(triple(5));
+export { twice, triple }
