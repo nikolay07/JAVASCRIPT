@@ -3,6 +3,6 @@ export const requestUserData = (userId, callback) => {
         if (userId === 'broken') {
             callback(null, 'Failed to load user data')
         }
-        callback({ userId: 'nik', email: `${nik}@gmail.com` });
-    }, 3000);
-};
+        callback({ userId: userId, email: `${userId}@example.com` });
+    }, 2000);
+}
