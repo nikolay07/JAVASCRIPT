@@ -15,14 +15,14 @@ export const addImage = (imgSrc, callback) => {
 
 };
 
-// const imgSrc = 'https://caricatura.ru/black/korsun/pic/karikatura-vopros_(sergey-korsun)_1597.gif';
-// const callback = (error, data) => {
-//     if (error) {
-//         console.log(error);
-//         return;
-//     };
-//     const { width, height } = data;
-//     const sizeElem = document.querySelector('.image-size');
-//     sizeElem.textContent = `${width} x ${height}`;
-// }
-// addImage(imgSrc, callback);
+const imgSrc = 'https://caricatura.ru/black/korsun/pic/karikatura-vopros_(sergey-korsun)_1597.gif';
+const callback = (error, data) => {
+        if (error) {
+            console.log(error);
+            return;
+        };
+        const { width, height } = data;
+        const sizeElem = document.querySelector('.image-size');
+        sizeElem.textContent = `${width} x ${height}`;
+    }
+    //addImage(imgSrc, callback);
