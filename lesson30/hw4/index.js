@@ -1,19 +1,23 @@
-export const addImage = (url, callback) => {
-    const img = document.createElement('img');
-    img.setAttribute('alt', 'User avatar');
-    img.src = url;
+export const addImageV2 = imageSrc => {
+    const addImage = new Promise((resolve, reject) => {
+        const img = document.createElement('img');
+        img.setAttribute('alt', 'User avatar');
+        img.src = imageSrc;
 
-    const pageElem = document.querySelector('.page');
-    pageElem.append(img);
+        const pageElem = document.querySelector('.page');
+        pageElem.append(img);
 
-    const onImageLoaded = () => {
-        const { width, height } = img;
-        callback(null, { width, height });
-    }
+        const onImageLoaded = () => {
+            const { width, height } = img;
+            resolve({ width, height });
+        }
 
-    const onImageLoadError = () => callback('Image load failed');
+        img.addEventListener('load', onImageLoaded);
+        img.addEventListener('error', () => reject(new Error('Image load failed')));
+    });
+    return addImage;
+}
 
-    img.addEventListener('load', onImageLoaded);
-
-    img.addEventListener('error', onImageLoadError);
-};
+addImageV2(imgSrc)
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
