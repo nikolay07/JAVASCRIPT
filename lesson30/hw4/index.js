@@ -1,8 +1,8 @@
-const addImageV2 = imageSrc => {
+const addImageV2 = myImage => {
     const addImage = new Promise((resolve, reject) => {
         const img = document.createElement('img');
         img.setAttribute('alt', 'User avatar');
-        img.src = imageSrc;
+        img.src = myImage;
 
         const pageElem = document.querySelector('.page');
         pageElem.append(img);
@@ -21,3 +21,5 @@ const imgSrc = 'https://ru.wikipedia.org/wiki/PNG#/media/%D0%A4%D0%B0%D0%B9%D0%B
 addImageV2(imgSrc)
     .then(data => console.log(data))
     .catch(error => console.log(error));
+
+export { addImageV2 };
