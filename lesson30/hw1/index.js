@@ -9,9 +9,9 @@ const userDataPromise = new Promise(resolve => {
  * Выведите в консоль переменную userDataPromise
  * Ответьте себе на вопрос, какой тип данных имеет переменная userDataPromise?
  */
+console.log(userDataPromise);
 
 /* ...code here */
-console.log(userDataPromise);
 
 
 /*
@@ -32,7 +32,7 @@ userDataPromise
  */
 
 userDataPromise
-    .then(function onSuccess(userData) {
+    .then(function onSuccess(userData /* ...code here */ ) {
         /* ...code here */
         console.log(`My name is ${userData.name}. I am ${userData.age} years old`);
     });
