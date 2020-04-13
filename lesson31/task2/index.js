@@ -1,22 +1,19 @@
-const requestUserData = userId => {
-    return new Promise((rulfilled, reject) => {
-        if (userId === 'broken') {
-            setTimeout(() => {
-                reject(new Error('User not found'));
-            }, 500);
-        } else {
-            setTimeout(() => {
-                rulfilled({
-                    name: 'Jonh',
-                    age: 17,
-                    userId: `${userId}`,
-                    email: `${userId}@example.com`,
-                });
-            }, 1000);
-        }
+export const anyncCalculator = num => new Promise((resolve) => {
+        setTimeout(() => {
+            console.log(`Initial value:${num}`);
+            resolve(num);
+        }, 3000);
+    })
+    .then(value => new Promise((resolve) => {
+        setTimeout(() => {
+            const result = value * value;
+            console.log(`Squared value:${result}`);
+            resolve(result);
+        }, 3000);
+    }))
+    .then(value => {
+        const result = value * 2;
+        console.log(`Doubled value:${result}`);
+        resolve(result);
     });
-};
-requestUserData('user1')
-    .then(data => console.log(data))
-    .catch(error => console.log(error))
-    // .finally(() => console.log('finally'))
+anyncCalculator(5).then(value => console.log(value));
