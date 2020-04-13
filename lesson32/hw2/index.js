@@ -9,7 +9,7 @@ const promiseNumber3 = Promise.resolve(8);
 const resultPromiseAll = (...promiseNumbers) =>
     Promise.all(promiseNumbers);
 
-const resultPromise = resultPromiseFunc(promiseNumber1, promiseNumber2, promiseNumber3);
+const resultPromise = resultPromiseAll(promiseNumber1, promiseNumber2, promiseNumber3);
 
 resultPromise
     .then(numbersList => {
@@ -20,3 +20,4 @@ resultPromise
     .then(result => {
         console.log(result); // 98
     });
+export { resultPromise };
