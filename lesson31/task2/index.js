@@ -1,4 +1,4 @@
-export const anyncCalculator = num => new Promise((resolve) => {
+export const asyncCalculator = num => new Promise((resolve) => {
         setTimeout(() => {
             console.log(`Initial value:${num}`);
             resolve(num);
@@ -16,4 +16,4 @@ export const anyncCalculator = num => new Promise((resolve) => {
         console.log(`Doubled value:${result}`);
         return (result);
     });
-//anyncCalculator(5).then(value => console.log(value));
+//asyncCalculator(5).then(value => console.log(value));
