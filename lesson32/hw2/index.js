@@ -6,7 +6,7 @@ const promiseNumber3 = Promise.resolve(8);
  * создайте промис и присвойте переменной resultPromise
  * чтобы в консоль вывелась сумма всех чисел из трех промисов
  */
-const resultPromiseFunc = (...promiseNumbers) =>
+const resultPromiseAll = (...promiseNumbers) =>
     Promise.all(promiseNumbers);
 
 const resultPromise = resultPromiseFunc(promiseNumber1, promiseNumber2, promiseNumber3);
