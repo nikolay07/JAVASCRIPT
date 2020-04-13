@@ -1,5 +1,7 @@
+import { addImage } from './addImageaddImage.js'
+
 const addImageV2 = myImage => {
-    const addImage = new Promise((resolve, reject) => {
+    addImage = new Promise((resolve, reject) => {
         const img = document.createElement('img');
         img.setAttribute('alt', 'User avatar');
         img.src = myImage;
