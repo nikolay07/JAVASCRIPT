@@ -1,4 +1,4 @@
-fetch('https://my-json-server.typicode.com/nikolay07/server')
-    .then(res => res.json(12))
+fetch('https://github.com/nikolay07/server/blob/master/db.json')
+    .then(res => res.json())
     .then(data => console.log(data))
     .catch(() => console.log('Some error'));
