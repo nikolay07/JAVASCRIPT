@@ -1,24 +1,24 @@
-const getValueWithDelay = (value, delay) => {
-    return new Promise(resolve => {
+const getValueWithDelay = (value, delay) =>
+    new Promise(resolve =>
         setTimeout(() => {
             console.log(value);
-            resolve(value)
-        }, delay);
-    });
-};
-// const asyncNum1 = getValueWithDelay("d", 1000);
-// const asyncNum2 = getValueWithDelay('44', 2000);
-// const asyncNum3 = getValueWithDelay(10, 3000);
+            resolve(value);
+        }, delay));
 
-const getSum = nums => nums
+// const asyncNum1 = getValueWithDelay(56, 1000);
+// const asyncNum2 = getValueWithDelay(undefined, 2000);
+// const asyncNum3 = getValueWithDelay('6', 3000);
+
+const getSum = numbers =>
+    numbers
     .filter(value => !isNaN(value))
-    .reduce((acc, num) => acc + Number(num), 0)
-const asyncSum = (...asyncNumbers) => {
-    return Promise.all(asyncNumbers)
-        .then(nums => getSum(nums))
-        .catch(() => Promise.reject(new Error('Can\'t calculate')))
-};
+    .reduce((acc, rec) => acc + Number(rec), 0);
+
+export const asyncSum = (...asyncNumbers) =>
+    Promise.all(asyncNumbers)
+    .then(num => getSum(num))
+    .catch(() =>
+        Promise.reject(new Error("Can't calculate")));
+
 asyncSum(asyncNum1, asyncNum2, asyncNum3)
     .then(result => console.log(result));
-
-export { asyncSum };
