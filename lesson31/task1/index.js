@@ -1,5 +1,5 @@
-const requestUserData = userId => {
-    return new Promise((rulfilled, reject) => {
+export const requestUserData = userId =>
+    new Promise((rulfilled, reject) => {
         if (userId === 'broken') {
             setTimeout(() => {
                 reject(new Error('User not found'));
@@ -7,17 +7,11 @@ const requestUserData = userId => {
         } else {
             setTimeout(() => {
                 rulfilled({
-                    name: 'Jonh',
+                    name: 'John',
                     age: 17,
-                    userId: `${userId}`,
+                    userId,
                     email: `${userId}@example.com`,
                 });
             }, 1000);
         }
     });
-};
-requestUserData('user1')
-    .then(data => console.log(data))
-    .catch(error => console.log(error))
-    // .finally(() => console.log('finally'))
-export { requestUserData }
