@@ -4,4 +4,4 @@ export const delay = (ms) => {
     })
 }
 
-//delay(5000).then(() => console.log('Done!'))
+delay(5000).then(() => console.log('Done!'))
