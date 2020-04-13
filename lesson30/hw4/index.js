@@ -1,4 +1,4 @@
-import { addImage } from './addImageaddImage.js'
+import { addImage } from './addImage.js'
 
 const addImageV2 = myImage => {
     addImage = new Promise((resolve, reject) => {
