@@ -14,6 +14,6 @@ export const anyncCalculator = num => new Promise((resolve) => {
     .then(value => {
         const result = value * 2;
         console.log(`Doubled value:${result}`);
-        resolve(result);
+        return (result);
     });
-anyncCalculator(5).then(value => console.log(value));
+//anyncCalculator(5).then(value => console.log(value));
