@@ -1,0 +1,1 @@
+const userAvatarElem = document.querySelector('.user__avatar');
