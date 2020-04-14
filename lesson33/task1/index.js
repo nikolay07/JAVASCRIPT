@@ -8,7 +8,26 @@ userAvatarElem.src = defaultAvatar;
 //https://api.github.com/users/nikola07
 function fetchUserData(userName) {
     return fetch(`https://api.github.com/users/${userName}`)
-        .then(response => response.json())
+        .then(response => {
+            if (response.status === 403) {
+                setTimeout(() => {
+                    return response.json()
+                }, 3000);
+
+            }
+            return response.json()
+        })
+
+
+    if (response.status <= 400) {
+        return response.json()
+    } else {
+        return response.json().then(error => {
+            const someError = new Error('Чето не так');
+            someError.data = error;
+            throw someError;
+        })
+    }
 }
 const renderUserData = userData => {
     const { avatar_url, name, location } = userData;
