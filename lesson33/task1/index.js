@@ -18,16 +18,6 @@ function fetchUserData(userName) {
             return response.json()
         })
 
-
-    if (response.status <= 400) {
-        return response.json()
-    } else {
-        return response.json().then(error => {
-            const someError = new Error('Чето не так');
-            someError.data = error;
-            throw someError;
-        })
-    }
 }
 const renderUserData = userData => {
     const { avatar_url, name, location } = userData;
