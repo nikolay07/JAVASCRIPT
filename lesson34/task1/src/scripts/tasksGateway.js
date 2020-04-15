@@ -1,16 +1,16 @@
 const baseUrl = 'https://crudcrud.com/api/47ed6cc0ec434b54ba59e3dbbd6dfabd/tasks';
 
-function mapTasks(tasks) {
+const mapTasks = tasks => {
     return tasks.map(({ _id, ...rest }) => ({...rest, id: _id }));
 };
 
-export function getTasksList() {
+export const getTasksList = () => {
     return fetch(baseUrl)
         .then(response => response.json())
         .then(tasks => mapTasks(tasks))
 };
 
-export function creatTask(taskData) {
+export const creatTask = taskData => {
     return fetch(baseUrl, {
         method: 'POST',
         headers: {
@@ -20,7 +20,7 @@ export function creatTask(taskData) {
     })
 };
 
-export function updateTask(taskId, updatedTaskData) {
+export const updateTask = (taskId, updatedTaskData) => {
     return fetch(`${baseUrl}/${taskId}`, {
         method: 'PUT',
         headers: {
@@ -30,7 +30,7 @@ export function updateTask(taskId, updatedTaskData) {
     })
 };
 
-export function deleteTask(taskId) {
+export const deleteTask = taskId => {
     return fetch(`${baseUrl}/${taskId}`, {
         method: 'DELETE',
     })
