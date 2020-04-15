@@ -1,78 +1,97 @@
 * {
-    font-family: 'Arial';
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
 }
 
 .title {
-    font-size: 24px;
-    text-transform: uppercase;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 0;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .todo-list {
-    max-width: 600px;
-    background-color: coral;
-    margin: auto;
-    margin-top: 16px;
-    padding: 8px;
-    border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 32px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: coral;
 }
 
 .list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    margin: auto;
-    width: 100%;
-}
-
-.list__item {
-    margin-bottom: 8px;
+  width: 100%;
+  margin: auto;
+  padding: 0;
+  list-style-type: none;
 }
 
 .list-item {
-    height: 40px;
-    background-color: wheat;
-    padding: 8px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: wheat;
 }
-
 .list-item_done {
-    opacity: 0.7;
-    text-decoration: line-through;
+  opacity: 0.7;
 }
-
+.list-item_done .list-item__text {
+  text-decoration: line-through;
+}
 .list-item:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
-
 .list-item__checkbox {
-    margin-right: 8px;
+  margin-right: 8px;
 }
-
-.task-input {
-    height: 32px;
-    padding-left: 16px;
-    border: 3px solid #ccc;
-    border-radius: 8px;
-    width: 100%;
+.list-item__delete-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  margin-left: auto;
+  text-decoration: none;
+  padding: 0;
+  transform: rotate(45deg);
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  opacity: 0.7;
+}
+.list-item__delete-btn::before {
+  content: "+";
 }
 
 .btn {
-    height: 32px;
-    min-width: 64px;
-    margin-left: 16px;
-    border: 3px solid #ccc;
-    outline: none;
-    border-radius: 8px;
-    margin-left: 16px;
+  height: 32px;
+  min-width: 64px;
+  margin-left: 16px;
+  border-radius: 8px;
+  border: 3px solid #ccc;
+  cursor: pointer;
+  outline: none;
 }
 
 .actions {
-    display: flex;
-    margin-bottom: 8px;
+  display: flex;
+  margin-bottom: 8px;
 }
+
+.task-input {
+  flex: 1;
+  height: 32px;
+  border-radius: 8px;
+  border: 3px solid #ccc;
+}
+
+/*# sourceMappingURL=styles.css.map */
