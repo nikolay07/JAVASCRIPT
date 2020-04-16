@@ -1,38 +1,49 @@
-const loginForm = document.querySelector('.login-form');
+const baseUrl = 'https://5e98af0c5eabe7001681c458.mockapi.io/v1/users';
+const userForm = document.querySelector('.login-form');
 const submitBtn = document.querySelector('.submit-button');
 const errorText = document.querySelector('.error-text');
-const allUsers = 'https://5e98af0c5eabe7001681c458.mockapi.io/v1/users';
-const headersJson = { 'Content-Type': 'application/json; charset=utf-8' };
 
-const checkValidation = () => {
-    if (loginForm.reportValidity()) {
+const onFormChange = () => {
+    errorText.textContent = null;
+
+    if (userForm.reportValidity()) {
         submitBtn.disabled = false;
     }
 }
-loginForm.addEventListener('input', checkValidation);
-const onFormSubmit = event => {
+const onFormSubmit = (event) => {
     event.preventDefault();
-    const formData = [...new FormData(loginForm)]
-        .reduce((acc, arr) => ({...acc, [arr[0]]: arr[1] }), {});
-    addNewUser(formData)
-        .then(response => response.json())
-        .then(user => {
-            alert(JSON.stringify(user));
-            loginForm.reset();
+    const formData = [...new FormData(userForm)]
+        .reduce((acc, item) => {
+            return {
+                [item[0]]: item[1],
+                ...acc,
+            }
+        }, {});
+    postUser(formData)
+        .then((response) => {
+            if (!response.ok) {
+                throw Error(response.statusText);
+            }
+            return response.json();
+        }).then((response) => {
+            window.alert(JSON.stringify(response));
+            userForm.reset();
             submitBtn.disabled = true;
-        })
-        .catch(() => {
+        }).catch(() => {
             errorText.textContent = 'Failed to create user';
-            loginForm.reset();
+            userForm.reset();
             submitBtn.disabled = true;
         });
-};
-loginForm.addEventListener('submit', onFormSubmit);
+}
+userForm.addEventListener("input", onFormChange);
+userForm.addEventListener("submit", onFormSubmit);
 
-const addNewUser = user => {
-    return fetch(allUsers, {
+const postUser = (newUserData) => {
+    return fetch(baseUrl, {
         method: 'POST',
-        headers: headersJson,
-        body: JSON.stringify(user),
-    });
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: JSON.stringify(newUserData),
+    })
 };
