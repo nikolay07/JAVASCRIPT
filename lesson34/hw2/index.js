@@ -4,31 +4,36 @@ const errorText = document.querySelector('.error-text');
 const allUsers = 'https://5e6b6f91d708a000160b48ba.mockapi.io/api/v1/use';
 const headersJson = { 'Content-Type': 'application/json; charset=utf-8' };
 
-const loginForm = document.querySelector('.login-form')
-const formInputs = document.querySelectorAll('.form-input')
-const formSubmitBtn = document.querySelector('.submit-button')
-const errorTextElem = document.querySelector('.error-text')
-
-const onInputChange = (e) => {
-    formSubmitBtn.disabled = !loginForm.reportValidity()
-    errorTextElem.textContent = ''
+const isValidity = () => {
+    if (loginForm.reportValidity()) {
+        submitBtn.disabled = false;
+    }
 }
-
-const onSubmitForm = (e) => {
-    e.preventDefault()
-    const userData = Object.fromEntries([...new FormData(loginForm)])
-
-    setUserData(userData)
-        .then(serverResponse => serverResponse.json())
-        .then(responseData => {
-            alert(JSON.stringify(responseData));
-            [...formInputs].forEach(inputElem => inputElem.value = '')
+loginForm.addEventListener('input', isValidity);
+const onFormSubmit = event => {
+    event.preventDefault();
+    const formData = [...new FormData(loginForm)]
+        .reduce((acc, arr) => ({...acc, [arr[0]]: arr[1] }), {});
+    addNewUser(formData)
+        .then(response => response.json())
+        .then(user => {
+            alert(JSON.stringify(user));
+            loginForm.reset();
+            submitBtn.disabled = true;
         })
-        .catch(error => {
-            errorTextElem.textContent = 'Failed to create user'
-        })
-}
+        .catch(() => {
+            errorText.textContent = 'Failed to create user';
+            loginForm.reset();
+            submitBtn.disabled = true;
+        });
+};
+loginForm.addEventListener('submit', onFormSubmit);
 
-loginForm.addEventListener('input', onInputChange)
-formSubmitBtn.addEventListener('click', onSubmitForm)
-    //addNewUser({ email: email @email.com, firstName: "Vasyl", password: v12345v; })
+const addNewUser = user => {
+    return fetch(allUsers, {
+        method: 'POST',
+        headers: headersJson,
+        body: JSON.stringify(user),
+    });
+};
+//addNewUser({email: email@email.com, firstName: "Vasyl", password: v12345v;})
