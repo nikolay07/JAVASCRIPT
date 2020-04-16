@@ -42,11 +42,8 @@ export const onToggleTask = e => {
 }
 
 export const onDeleteTask = e => {
-    const del = e.target.classList.contains('list-item__delete-btn');
-
-    if (!del) {
-        return;
-    }
+    const deleteItem = e.target.classList.contains('list-item__delete-btn');
+    if (!deleteItem) return;
     const taskId = e.target.dataset.id;
     const tasksList = getItem('tasksList');
     const { text, createDate } = tasksList
