@@ -4,12 +4,12 @@ const errorText = document.querySelector('.error-text');
 const allUsers = 'https://5e6b6f91d708a000160b48ba.mockapi.io/api/v1/use';
 const headersJson = { 'Content-Type': 'application/json; charset=utf-8' };
 
-const isValidity = () => {
+const checkValidation = () => {
     if (loginForm.reportValidity()) {
         submitBtn.disabled = false;
     }
 }
-loginForm.addEventListener('input', isValidity);
+loginForm.addEventListener('input', checkValidation);
 const onFormSubmit = event => {
     event.preventDefault();
     const formData = [...new FormData(loginForm)]
