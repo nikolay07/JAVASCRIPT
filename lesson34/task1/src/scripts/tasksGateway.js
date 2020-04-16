@@ -1,4 +1,4 @@
-const baseUrl = 'https://crudcrud.com/api/47ed6cc0ec434b54ba59e3dbbd6dfabd/tasks';
+const baseUrl = 'https://5e983e545eabe7001681bd52.mockapi.io/project/tasks/tasks';
 
 const mapTasks = tasks =>
     tasks.map(({ id, ...rest }) => ({...rest, id: id }));

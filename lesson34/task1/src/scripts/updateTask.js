@@ -2,30 +2,21 @@ import { renderTasks } from './renderer.js';
 import { getItem, setItem } from './storage.js';
 import { updateTask, getTasksList, deleteTask } from './tasksGateway.js';
 
-export const onListClick = e => {
-    const check = e.target.classList.contains('list-item__checkbox');
-    const del = e.target.classList.contains('list-item__delete-btn');
-
-    if (del) {
-        onDeleteTask(e)
-    }
-    if (check) {
-        onToggleTask(e)
-    }
+export const onListClick = event => {
+    const check = event.target.classList.contains('list-item__checkbox');
+    const deleteTaskItem = event.target.classList.contains('list-item__delete-btn');
+    if (deleteTaskItem) { onDeleteTask(event) };
+    if (check) { onToggleTask(event) };
 }
 
-export const onToggleTask = e => {
-    const isCheckbox = e.target.classList.contains('list-item__checkbox')
-
-    if (!isCheckbox) {
-        return;
-    }
-    const taskId = e.target.dataset.id;
+export const onToggleTask = event => {
+    const isCheckbox = event.target.classList.contains('list-item__checkbox');
+    if (!isCheckbox) return;
+    const taskId = event.target.dataset.id;
     const tasksList = getItem('tasksList');
     const { text, createDate } = tasksList
         .find(task => task.id === taskId);
-    const done = e.target.checked;
-
+    const done = event.target.checked;
     const updatedTask = {
         text,
         createDate,
@@ -41,15 +32,14 @@ export const onToggleTask = e => {
         });
 }
 
-export const onDeleteTask = e => {
-    const deleteItem = e.target.classList.contains('list-item__delete-btn');
-    if (!deleteItem) return;
-    const taskId = e.target.dataset.id;
+export const onDeleteTask = event => {
+    const deleteTaskItem = event.target.classList.contains('list-item__delete-btn');
+    if (!deleteTaskItem) return;
+    const taskId = event.target.dataset.id;
     const tasksList = getItem('tasksList');
     const { text, createDate } = tasksList
         .find(task => task.id === taskId);
-    const done = e.target.checked;
-
+    const done = event.target.checked;
     const updatedTask = {
         text,
         createDate,
@@ -63,4 +53,4 @@ export const onDeleteTask = e => {
             setItem('tasksList', newTasksList);
             renderTasks();
         });
-}
+};
