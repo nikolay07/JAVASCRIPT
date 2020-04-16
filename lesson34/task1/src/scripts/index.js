@@ -9,11 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
             setItem('tasksList', tasksList)
             renderTasks();
         })
+
     initTodoListHandlers();
 });
 
 const onStorageChange = e => {
-    if (e.key === 'tasksList') renderTasks();
-};
+    if (e.key === 'tasksList') {
+        renderTasks();
+    }
+}
 
 window.addEventListener('storage', onStorageChange);
