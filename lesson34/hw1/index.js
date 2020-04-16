@@ -8,14 +8,14 @@ const getUsersList = () => {
         })
         .then(response => response.json());
 };
-// getUsersList(baseUrl).then(result => console.log(result))
+//getUsersList().then(result => console.log(result))
 
 /* getUserById code here */
 const getUserById = userById => {
     return fetch(`${baseUrl}/${userById}`)
         .then(response => response.json())
 };
-// getUserById('3').then(result => console.log(result))
+//getUserById('3').then(userById => console.log(userById));
 
 /* createUser code here */
 const user = {
@@ -52,8 +52,7 @@ const updateUser = (userId, updateUserInfo) => {
 const deleteUser = userId => {
     return fetch(`${baseUrl}/${userId}`, {
         method: 'DELETE',
-        headers: headersJson,
     })
 };
-//deleteUser("9");
+//deleteUser("8");
 export { getUsersList, getUserById, createUser, updateUser, deleteUser };
