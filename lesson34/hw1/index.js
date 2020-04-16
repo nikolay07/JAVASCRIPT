@@ -5,9 +5,8 @@ const headersJson = { 'Content-Type': 'application/json;charset=utf-8' };
 const getUsersList = () => {
     return fetch(baseUrl, {
             method: 'GET',
-            headers: headersJson,
         })
-        .then(response => response.json())
+        .then(response => response.json());
 };
 // getUsersList(baseUrl).then(result => console.log(result))
 
