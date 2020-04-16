@@ -3,9 +3,7 @@ const headersJson = { 'Content-Type': 'application/json;charset=utf-8' };
 
 /* getUsersList code here */
 const getUsersList = () => {
-    return fetch(baseUrl, {
-            method: 'GET',
-        })
+    return fetch(baseUrl)
         .then(response => response.json());
 };
 //getUsersList().then(result => console.log(result))
