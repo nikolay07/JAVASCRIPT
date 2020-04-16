@@ -65,5 +65,5 @@ export const onDeleteTask = e => {
         .then(newTasksList => {
             setItem('tasksList', newTasksList);
             renderTasks();
-        })
+        });
 }
