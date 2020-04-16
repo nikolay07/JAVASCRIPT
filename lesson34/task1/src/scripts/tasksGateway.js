@@ -20,13 +20,13 @@ export const creatTask = taskData => {
     })
 };
 
-export const updateTask = (taskId, updatedTaskData) => {
+export const updateTask = (taskId, taskData) => {
     return fetch(`${baseUrl}/${taskId}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json;charset=utf-8',
         },
-        body: JSON.stringify(updatedTaskData),
+        body: JSON.stringify(taskData),
     })
 };
 
