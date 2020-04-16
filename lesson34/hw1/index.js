@@ -2,7 +2,7 @@ const baseUrl = 'https://5e988dc45eabe7001681c309.mockapi.io/api/v1/users';
 const headersJson = { 'Content-Type': 'application/json;charset=utf-8' };
 
 /* getUsersList code here */
-const getUsersList = baseUrl => {
+const getUsersList = () => {
     return fetch(baseUrl, {
             method: 'GET',
             headers: headersJson,
