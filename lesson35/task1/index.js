@@ -2,10 +2,10 @@ window.addEventListener("error", function onUnhandledError(err) {
     console.error("error", err.message);
 });
 
-let userParsingResult;
+let userParsingResult = '{"name": "Tom"}';
 
 try {
-    const user = JSON.parse( /* валидный JSON c данными пользователя */ );
+    const user = JSON.parse(userParsingResult); /* валидный JSON c данными пользователя */
     console.log("User data: ", user);
     userParsingResult = "success";
 } catch (e) {
@@ -14,10 +14,10 @@ try {
     console.log(`User parsing finished with ${userParsingResult}`);
 }
 
-let productParsingResult;
+let productParsingResult = '{"name": "Ann"';
 
 try {
-    const product = JSON.parse( /* сломанный JSON c данными о продукте */ );
+    const product = JSON.parse(productParsingResult); /* сломанный JSON c данными о продукте */
     console.log("Product data: ", product);
     productParsingResult = "success";
 } catch (e) {
