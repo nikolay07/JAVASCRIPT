@@ -1,4 +1,4 @@
-import { fetchUserData, fetchRepositories } from './gateways.js'
+import { fetchUserData, fetchRepositories } from './fetches.js'
 import { renderUserData } from './user.js'
 import { renderRepos, cleanReposList } from './repo.js'
 
