@@ -1,5 +1,5 @@
 const userName = '{"name" : "Nik"}';
-const parseUser = jsonUser => {
+export const parseUser = jsonUser => {
     try {
         const user = JSON.parse(jsonUser);
         //console.log(user);
