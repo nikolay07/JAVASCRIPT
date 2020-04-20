@@ -21,10 +21,10 @@ async function onSearchUser() {
     try {
         const userData = await fetchUserData(userName);
         renderUserData(userData);
-        const repoList = await fetchRepositories(userData.repos_url);
-        renderRepos(repoList);
-    } catch (error) {
-        alert(err.message);
+        const reposList = await fetchRepositories(userData.repos_url);
+        renderRepos(reposList);
+    } catch {
+        alert('Failed to load data');
     } finally {
         hideSpinner();
     }
