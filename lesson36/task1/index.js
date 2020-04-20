@@ -1,17 +1,16 @@
-// async function fetchUser() {
-//     const promise = new Promise(resolve => {
-//         setTimeout(() => {
-//             resolve(17);
-//         }, 1000);
-//     })
-//     const result = await promise;
-//     console.log(result);
-//     return 1;
-// };
-// const result = fetchUser()
-// console.log(result);
+export const fetchUser = async userId => {
+    try {
+        const response = await fetch(`https://api.github.com/users/${userId}`);
+        if (!response.ok) {
+            return null;
+        }
+        const userData = await response.json();
+        return userData;
+    } catch (error) {
+        throw new Error('Failed to fetch user');
+    }
 
-
-const getUser = async userId => {
-    const response = await fetch(``);
-}
+};
+fetchUser('nikolay07')
+    .then(userData => console.log(userData))
+    .catch(err => alert(err.message))
